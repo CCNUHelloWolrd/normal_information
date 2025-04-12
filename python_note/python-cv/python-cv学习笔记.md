@@ -1,9 +1,14 @@
 # OpenCV-Python实战
 
+温故而知新、一边学习一边参考其他资料、切勿付费
+
+建议学习时长：3小时
 
 [学习链接](https://blog.csdn.net/LOVEmy134611/article/details/119489496)
 
 [学习框架，仅作参考](https://blog.csdn.net/lovemy134611/category_10200958.html?utm_source=BWXQ_bottombtn&spm=1001.2101.3001.4225)
+
+[摘要](https://blog.csdn.net/qq_42978535/article/details/142697335)
 ### 安装
 基本库
 
@@ -110,6 +115,49 @@ opencv中创建视频文件需要考虑： 图片序列、fourcc、width、heigh
     python demo12_read_video_file_properties.py example.mp4
     python demo13_read_video_file_backwards.py example.mp4
 
+### 图像基本操作
+图像处理的基础操作包括缩放、裁剪、旋转
+
+[dsize函数放缩](https://blog.csdn.net/hysterisis/article/details/112381220)
+
+[dsize插值算法](https://blog.csdn.net/LaoYuanPython/article/details/111771138)
+
+[//]: # (图片请自行跳转：)
+[//]: # (![明细]&#40;https://i-blog.csdnimg.cn/blog_migrate/4976b11fa85f36f424fb26dc8f63e991.png, "'点击查看图片'"&#41;)
+
+[图片旋转](https://blog.csdn.net/qq_44109682/article/details/117434461)
+
+[仿射变换、透视变换](https://blog.csdn.net/ZZQ_UESTC/article/details/134999683)
+
+请先看完脚本再运行代码，直接运行 demo14_resize_image.py、demo15_crop_image.py、demo16_rotate_image.py 即可
+
+### 图像调整颜色
+
+[调整颜色](https://blog.csdn.net/weixin_40522801/article/details/106517099)
+
+[边缘检测](https://blog.csdn.net/m0_51402531/article/details/121066693)
+
+边缘检测在多媒体信息处理技术专选课有讲原理，不再补充。
+
+请先看完脚本再运行代码，直接运行demo17_cvt_color.py, demo18_canny.py 即可
+
+### 图像滤波
+[高斯滤波](https://blog.csdn.net/sunjintaoxxx/article/details/121420594)
+
+图像滤波用于平滑图像，去除噪声或增强细节
+
+请先看完脚本再运行代码，直接运行demo19_GaussianBlur.py 即可
+
+### 图像文字、图像编辑
 
 
 
+
+### 物体检测（应用）
+实战：haar实现摄像头实时人脸识别
+
+[opencv中haar级联分类器的所有XML下载](https://blog.csdn.net/m0_46498587/article/details/109550943)
+
+请先看完脚本再运行代码，利用下述命令行运行脚本，脚本信息在文件中有注释
+
+    python demo20_haar.py 0 human_face.mp4
