@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+# @Time    : 2024/2/28
+# @Author  : Zhang Rukun
+# @Software: PyCharm
+
+
+# @File    : cfg.py
+# @Description :外部库的引用、游戏类的实现
+
+# @File    : cfg2.py
+# @Description :游戏主要参数的设定，关键函数的给定
+
+# @File    : start_surface.py
+# @Description :游戏主界面
+
+# @File    : meaning_surface.py
+# @Description :功能性界面，提供游戏信息说明
+
+# @File    : gift_surface.py
+# @Description :功能性界面，提供游戏作弊码的交互
+
+# @File    : setting_surface.py
+# @Description :功能性界面，设定游戏数值
+
+# @File    : choose_surface.py
+# @Description :游戏内容界面，提供关卡的选择
+
+# @File    : flight_meaning_surface.py
+# @Description :游戏内容界面，提供战斗规则说明
+
+# @File    : chapter/.
+# @File    :  ch1_surface.py……
+# @Description :游戏内容界面，提供剧情的展示
+# @File    : ch1_choose1.py……
+# @Description :游戏内容界面，提供剧情分支选择内容
+# @File    : ch1_flight1.py……
+# @Description :游戏内容界面，提供战斗内容
