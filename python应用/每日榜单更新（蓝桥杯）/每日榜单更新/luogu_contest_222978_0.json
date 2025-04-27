@@ -1,0 +1,35 @@
+{
+  "scoreboard": {
+    "result": [
+      {
+        "details": {
+          "B2025": {
+            "score": 100,
+            "runningTime": 699127000
+          }
+        },
+        "user": {
+          "uid": "****",
+          "name": "Ex",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "score": 1200,
+        "runningTime": 2147483647
+      },
+    ],
+    "perPage": 50,
+    "count": 10
+  },
+  "userScore": null,
+  "userRank": null,
+  "firstBloodUID": {
+    "B2025": 1607725,
+  }
+}

@@ -1,0 +1,2109 @@
+{
+  "scoreboard": {
+    "result": [
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 485408000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 346431000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 1873471000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 387487000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 406385000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 388855000
+          }
+        },
+        "user": {
+          "uid": 1607967,
+          "name": "qazkami",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607967.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607967,
+            "name": "qazkami",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607967.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "邵逸飞"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 491537000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 343700000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 1041863000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 491269000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 491644000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 491958000
+          }
+        },
+        "user": {
+          "uid": 1607654,
+          "name": "zsh2cjh",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607654.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607654,
+            "name": "zsh2cjh",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607654.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "诸晟昊2cjh"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 471917000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 401015000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 748977000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 402910000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 474322000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 408352000
+          }
+        },
+        "user": {
+          "uid": 1609901,
+          "name": "immortal000",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1609901.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1609901,
+            "name": "immortal000",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1609901.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "马梓桐"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 643617000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 467655000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 1179561000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 509564000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 558461000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 596168000
+          }
+        },
+        "user": {
+          "uid": 1608144,
+          "name": "SADAagfwesf",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608144.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1608144,
+            "name": "SADAagfwesf",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608144.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "半夜嚼蟑螂越嚼人越强  张天煜"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 577671000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 1122123000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 1123046000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 1122219000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 1122657000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 1122381000
+          }
+        },
+        "user": {
+          "uid": 65169,
+          "name": "ExRoc",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/65169.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 65169,
+            "name": "ExRoc",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/65169.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 2,
+          "permission": 127,
+          "realName": "卷起旋风 官展鹏"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 600784000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 483681000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 605403000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 491407000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 514004000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 494416000
+          }
+        },
+        "user": {
+          "uid": 1623626,
+          "name": "Zt3005",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1623626.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Gray",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1623626,
+            "name": "Zt3005",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1623626.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Gray",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "张彤"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 761574000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 522670000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 573761000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 753890000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 561338000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 650790000
+          }
+        },
+        "user": {
+          "uid": 1611495,
+          "name": "Trayyoung",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1611495.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1611495,
+            "name": "Trayyoung",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1611495.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "龙凤呈祥 杨博文"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 954913000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 738031000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 732349000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 739079000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 954692000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 946813000
+          }
+        },
+        "user": {
+          "uid": 106594,
+          "name": "My_Newstart",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/106594.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 106594,
+            "name": "My_Newstart",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/106594.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "俞海婷"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 760411000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 747041000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 774206000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 749204000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 771541000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 749994000
+          }
+        },
+        "user": {
+          "uid": 1235912,
+          "name": "rgnygv",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1235912.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1235912,
+            "name": "rgnygv",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1235912.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "rgnygv刘盛琼"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 1006852000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 994974000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 1023856000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 996330000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 1017658000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 997303000
+          }
+        },
+        "user": {
+          "uid": 1612502,
+          "name": "Ricado_o",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1612502.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1612502,
+            "name": "Ricado_o",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1612502.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "李博2023"
+        },
+        "score": 600,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 88,
+            "runningTime": 946233000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 776587000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 950695000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 864508000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 950263000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 943238000
+          }
+        },
+        "user": {
+          "uid": 1616306,
+          "name": "liqiuxia_",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1616306.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1616306,
+            "name": "liqiuxia_",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1616306.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "黎秋霞"
+        },
+        "score": 588,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 781436000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 850961000
+          },
+          "P1835": {
+            "score": 100,
+            "runningTime": 851162000
+          },
+          "P1965": {
+            "score": 80,
+            "runningTime": 850996000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 851107000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 851031000
+          }
+        },
+        "user": {
+          "uid": 1460686,
+          "name": "hln666666",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1460686.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1460686,
+            "name": "hln666666",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1460686.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "安妍凝"
+        },
+        "score": 580,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 483621000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 398943000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 413082000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 400582000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 411392000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 404034000
+          }
+        },
+        "user": {
+          "uid": 1608493,
+          "name": "Mana313",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608493.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1608493,
+            "name": "Mana313",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608493.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "黎棉笙"
+        },
+        "score": 540,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 431772000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 382835000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 475959000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 422554000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 475183000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 427248000
+          }
+        },
+        "user": {
+          "uid": 1509463,
+          "name": "user_6727",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1509463.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1509463,
+            "name": "user_6727",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1509463.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "赵子毅"
+        },
+        "score": 540,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 422154000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 326608000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 423429000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 414867000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 422852000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 417195000
+          }
+        },
+        "user": {
+          "uid": 1623547,
+          "name": "artificla",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1623547.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1623547,
+            "name": "artificla",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1623547.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "汪思含    ：-（"
+        },
+        "score": 540,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 568160000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 337356000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 493076000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 343081000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 492537000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 346624000
+          }
+        },
+        "user": {
+          "uid": 1511111,
+          "name": "li0971",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1511111.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1511111,
+            "name": "li0971",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1511111.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "好想摆烂啊～李雨佳"
+        },
+        "score": 540,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 599631000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 411306000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 512770000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 422447000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 601440000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 505709000
+          }
+        },
+        "user": {
+          "uid": 1607745,
+          "name": "huangziheng0503",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607745.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607745,
+            "name": "huangziheng0503",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607745.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "黄子恒"
+        },
+        "score": 540,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 508259000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 413172000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 511780000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 413837000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 510234000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 416887000
+          }
+        },
+        "user": {
+          "uid": 1607621,
+          "name": "wulaxi",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607621.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607621,
+            "name": "wulaxi",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607621.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "高子豪"
+        },
+        "score": 540,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 700819000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 611125000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 701365000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 700112000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 698810000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 860178000
+          }
+        },
+        "user": {
+          "uid": 1642878,
+          "name": "makabaka556",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1642878.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1642878,
+            "name": "makabaka556",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1642878.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "胡晋豪"
+        },
+        "score": 540,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 88,
+            "runningTime": 469212000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 383438000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 473373000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 384880000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 473102000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 387756000
+          }
+        },
+        "user": {
+          "uid": 1608399,
+          "name": "P1234567890",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608399.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1608399,
+            "name": "P1234567890",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608399.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "彭庶越"
+        },
+        "score": 528,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 88,
+            "runningTime": 480520000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 397947000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 481875000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 398954000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 481256000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 474499000
+          }
+        },
+        "user": {
+          "uid": 1607655,
+          "name": "poolfish",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607655.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607655,
+            "name": "poolfish",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607655.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "刘兆轩"
+        },
+        "score": 528,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 88,
+            "runningTime": 928874000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 576637000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 936182000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 577359000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 931003000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 755690000
+          }
+        },
+        "user": {
+          "uid": 1607704,
+          "name": "zxzcfzc",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607704.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607704,
+            "name": "zxzcfzc",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607704.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "张文富"
+        },
+        "score": 528,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 577671000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 423968000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 482887000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 662882000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 486751000
+          }
+        },
+        "user": {
+          "uid": 1614431,
+          "name": "xbfm779",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1614431.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1614431,
+            "name": "xbfm779",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1614431.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "张朴源"
+        },
+        "score": 500,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 763525000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 511295000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 513161000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 763734000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 671465000
+          }
+        },
+        "user": {
+          "uid": 1608061,
+          "name": "DongxUn",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608061.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Gray",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1608061,
+            "name": "DongxUn",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1608061.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Gray",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "饶宇峰"
+        },
+        "score": 500,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 2209727000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 596556000
+          },
+          "P1835": {
+            "score": 40,
+            "runningTime": 2211922000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 2125165000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 2211623000
+          },
+          "P3197": {
+            "score": 50,
+            "runningTime": 2205624000
+          }
+        },
+        "user": {
+          "uid": 1615673,
+          "name": "Chenxiaohhhh",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1615673.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1615673,
+            "name": "Chenxiaohhhh",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1615673.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "陈孝涵"
+        },
+        "score": 490,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 862668000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 489795000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 831331000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 832900000
+          }
+        },
+        "user": {
+          "uid": 1611637,
+          "name": "j1168291866",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1611637.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1611637,
+            "name": "j1168291866",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1611637.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "冀彦兴"
+        },
+        "score": 400,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1226": {
+            "score": 100,
+            "runningTime": 548897000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 641756000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 985978000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 643011000
+          }
+        },
+        "user": {
+          "uid": 1240378,
+          "name": "Hygge_99",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1240378.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1240378,
+            "name": "Hygge_99",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1240378.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "陈陈陈陈陈洋第"
+        },
+        "score": 400,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 1297903000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 1298789000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 1297849000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 1298807000
+          }
+        },
+        "user": {
+          "uid": 1133365,
+          "name": "ChaosRule",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1133365.png",
+          "slogan": "菜",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Green",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1133365,
+            "name": "ChaosRule",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1133365.png",
+            "slogan": "菜",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Green",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 3,
+          "permission": 127,
+          "realName": ""
+        },
+        "score": 400,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 66,
+            "runningTime": 1260316000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 1260032000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 1260122000
+          },
+          "P3197": {
+            "score": 50,
+            "runningTime": 1260209000
+          }
+        },
+        "user": {
+          "uid": 1607940,
+          "name": "wangboning123",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607940.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607940,
+            "name": "wangboning123",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607940.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": ""
+        },
+        "score": 316,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1226": {
+            "score": 100,
+            "runningTime": 426886000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 483598000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 484651000
+          }
+        },
+        "user": {
+          "uid": 1238305,
+          "name": "1215Hh",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1238305.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1238305,
+            "name": "1215Hh",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1238305.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "吴芷怡"
+        },
+        "score": 300,
+        "runningTime": 1395135000
+      },
+      {
+        "details": {
+          "P1226": {
+            "score": 100,
+            "runningTime": 856659000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 856399000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 856494000
+          }
+        },
+        "user": {
+          "uid": 1627439,
+          "name": "Yusuf",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1627439.png",
+          "slogan": null,
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Gray",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1627439,
+            "name": "Yusuf",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1627439.png",
+            "slogan": null,
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Gray",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "苏冠华"
+        },
+        "score": 300,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1226": {
+            "score": 100,
+            "runningTime": 859905000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 949324000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 952465000
+          }
+        },
+        "user": {
+          "uid": 1609783,
+          "name": "ieazinpyx",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1609783.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1609783,
+            "name": "ieazinpyx",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1609783.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "林水萍"
+        },
+        "score": 300,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1226": {
+            "score": 100,
+            "runningTime": 854746000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 855318000
+          },
+          "P3197": {
+            "score": 100,
+            "runningTime": 855742000
+          }
+        },
+        "user": {
+          "uid": 1610161,
+          "name": "ZhangYiding123456",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1610161.png",
+          "slogan": null,
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Gray",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1610161,
+            "name": "ZhangYiding123456",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1610161.png",
+            "slogan": null,
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Gray",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "张一鼎123456"
+        },
+        "score": 300,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 88,
+            "runningTime": 846373000
+          },
+          "P1226": {
+            "score": 100,
+            "runningTime": 846346000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 846403000
+          }
+        },
+        "user": {
+          "uid": 1238307,
+          "name": "knudxnt_Shirley",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1238307.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1238307,
+            "name": "knudxnt_Shirley",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1238307.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": ""
+        },
+        "score": 288,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1226": {
+            "score": 100,
+            "runningTime": 863158000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 863603000
+          },
+          "P3197": {
+            "score": 70,
+            "runningTime": 1378344000
+          }
+        },
+        "user": {
+          "uid": 1607725,
+          "name": "zNc2992",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607725.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607725,
+            "name": "zNc2992",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607725.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "程正南"
+        },
+        "score": 270,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 853320000
+          },
+          "P1965": {
+            "score": 100,
+            "runningTime": 853150000
+          },
+          "P3197": {
+            "score": 10,
+            "runningTime": 853209000
+          }
+        },
+        "user": {
+          "uid": 1624562,
+          "name": "luogu_yl",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1624562.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1624562,
+            "name": "luogu_yl",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1624562.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": ""
+        },
+        "score": 210,
+        "runningTime": 2147483647
+      },
+      {
+        "details": {
+          "P1226": {
+            "score": 100,
+            "runningTime": 827158000
+          },
+          "P3383": {
+            "score": 100,
+            "runningTime": 827331000
+          }
+        },
+        "user": {
+          "uid": 1615749,
+          "name": "Emiliaaa",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1615749.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1615749,
+            "name": "Emiliaaa",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1615749.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "张檬大王"
+        },
+        "score": 200,
+        "runningTime": 1654489000
+      },
+      {
+        "details": {
+          "P1217": {
+            "score": 100,
+            "runningTime": 606683000
+          },
+          "P1965": {
+            "score": 20,
+            "runningTime": 606257000
+          },
+          "P3197": {
+            "score": 10,
+            "runningTime": 606440000
+          }
+        },
+        "user": {
+          "uid": 1607635,
+          "name": "wjdwjd",
+          "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607635.png",
+          "slogan": "",
+          "badge": null,
+          "isAdmin": false,
+          "isBanned": false,
+          "color": "Blue",
+          "ccfLevel": 0,
+          "background": ""
+        },
+        "teamMember": {
+          "user": {
+            "uid": 1607635,
+            "name": "wjdwjd",
+            "avatar": "https://cdn.luogu.com.cn/upload/usericon/1607635.png",
+            "slogan": "",
+            "badge": null,
+            "isAdmin": false,
+            "isBanned": false,
+            "color": "Blue",
+            "ccfLevel": 0,
+            "background": ""
+          },
+          "type": 1,
+          "permission": 0,
+          "realName": "武劲达"
+        },
+        "score": 130,
+        "runningTime": 1819380000
+      }
+    ],
+    "perPage": 50,
+    "count": 38
+  },
+  "userScore": null,
+  "userRank": null,
+  "firstBloodUID": {
+    "P1217": 1623547,
+    "P1226": 1623547,
+    "P1835": 1611495,
+    "P1965": 1511111,
+    "P3197": 1511111,
+    "P3383": 1607967,
+    "AT_arc017_1": 1511111
+  }
+}
