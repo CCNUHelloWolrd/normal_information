@@ -21,5 +21,5 @@ __all__ = ["start"]
 from .main import start
 import os
 
-WORK_PATH = os.getcwd() + "/app"
+WORK_PATH = os.getcwd() + r"\app"
 print(f"当前地址为：{WORK_PATH}")
