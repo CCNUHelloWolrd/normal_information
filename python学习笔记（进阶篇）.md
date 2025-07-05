@@ -1,5 +1,6 @@
 # python学习个人感悟，汇集成笔记
 在此记录目录，详细内容进入个人分支查看
+玩python就是在玩类与实例，好玩
 
 ## 参考资料
 
@@ -236,8 +237,76 @@
     inspect 函数, 给定一个类型, 返回正处在生命周期的实例
 
 
-### 14.with as 与 open  
+### 14.with as 与 open  （来自复制）
 
+    定义 __enter__ 和 __exit__ 方法 进行上下文管理的类
+
+示例：
+
+    class File(object):
+    def __init__(self, file_name, method):
+        self.file_obj = open(file_name, method)
+    def __enter__(self):
+        return self.file_obj
+    def __exit__(self, type, value, traceback):
+        self.file_obj.close()
+
+    with File('demo.txt', 'w') as opened_file:
+        opened_file.write('Hola!')
+    我们的 __exit__ 函数接受三个参数。
+    这些参数对于每个上下文管理器类中的 __exit__ 方法都是必须的。
+    
+    底层：
+
+    with 语句先暂存了 File 类的 __exit__ 方法。
+    然后它调用 File 类的 __enter__ 方法。
+    __enter__ 方法打开文件并返回给 with 语句。
+    打开的文件句柄被传递给 opened_file 参数。
+    我们使用 .write() 来写文件。
+    with 语句调用之前暂存的 __exit__ 方法。
+    __exit__ 方法关闭了文件。
+
+    我们还没有谈到 __exit__ 方法的这三个参数：type，value 和 traceback。 在第4步和第6步之间，如果发生异常，Python 会将异常的 type，value 和 traceback 传递给 __exit__ 方法。 它让 __exit__ 方法来决定如何关闭文件以及是否需要其他步骤。在我们的案例中，我们并没有注意它们。
+    
+    那如果我们的文件对象抛出一个异常呢？万一我们尝试访问文件对象的一个不支持的方法。举个例子：
+    
+    复制
+    with File('demo.txt', 'w') as opened_file:
+        opened_file.undefined_function('Hola!')
+    我们来列一下，当异常发生时，with 语句会采取哪些步骤。
+    
+    它把异常的 type，value 和 traceback 传递给 __exit__方法。
+    
+    它让 __exit__ 方法来处理异常。
+    
+    如果 __exit__ 返回的是 True，那么这个异常就被优雅地处理了。
+    
+    如果 __exit__ 返回的是 True 以外的任何东西，那么这个异常将被 with 语句抛出。
+    
+    在我们的案例中，__exit__ 方法返回的是 None （如果没有 return 语句那么方法会返回 None）。因此，with 语句抛出了那个异常。
+    
+    复制
+    Traceback (most recent call last):
+      File "<stdin>", line 2, in <module>
+    AttributeError: 'file' object has no attribute 'undefined_function'
+    我们尝试下在 __exit__ 方法中处理异常：
+    
+    复制
+    class File(object):
+        def __init__(self, file_name, method):
+            self.file_obj = open(file_name, method)
+        def __enter__(self):
+            return self.file_obj
+        def __exit__(self, type, value, traceback):
+            print("Exception has been handled")
+            self.file_obj.close()
+            return True
+    
+    with File('demo.txt', 'w') as opened_file:
+        opened_file.undefined_function()
+    
+    # Output: Exception has been handled
+    我们的 __exit__ 方法返回了 True，因此没有异常会被 with 语句抛出。
 
 ### 15.Exception报错基类
     
@@ -385,4 +454,94 @@
     [<lambda>] 执行耗时: 0.000000900 
     [add_int2] 执行耗时: 0.000000500 
     发现资源花费 cpython >> lambda ~= def
+
+    依次调用cpython，def定义斐波那契数列，然后测试运行时间
+    虽然cpython的运行时间很稳定，但是数据类型为int，根本得不到答案
+    但是还是可以看出，时间主要耗费在函数的来回调用上，单独观察cpython的运行速度，真的是非常厉害
+    # 10:
+    # [fabo_python] 执行耗时: 0.000017600
+    # [fabo] 执行耗时: 0.000028800
+    
+    # 100:
+    # [fabo_python] 执行耗时: 0.000044300
+    # [fabo] 执行耗时: 0.000036300
+    
+    # 1000:
+    # [fabo_python] 执行耗时: 0.000120200
+    # [fabo] 执行耗时: 0.000041400
+    
+    # 10000:
+    # [fabo_python] 执行耗时: 0.005143100
+    # [fabo] 执行耗时: 0.000052200
+
+**个人结论**
+    
+    cpython 应当在运算密集时调用，并且因调用产生的开销应当可以忽略，
+    同时注意c语言的特性，cpython本质上是c语言。
+
+**补充**
+    
+    可以采用cython来提高效率，
+    可以使用PYTHON/C api来在c中写python，调用python.h
+    可以采用cffi直接在python中编写c代码
+
+    from cffi import FFI
+    
+    ffi = FFI()
+    
+    # 声明 C 函数原型
+    ffi.cdef("""
+        int add(int a, int b);
+        double multiply(double a, double b);
+        void print_message(const char* message);
+    """)
+    
+    # 编译内联 C 代码
+    ffi.set_source(
+        "_math_operations",
+        r"""
+        #include <stdio.h>
+        
+        int add(int a, int b) {
+            return a + b;
+        }
+        
+        double multiply(double a, double b) {
+            return a * b;
+        }
+        
+        void print_message(const char* message) {
+            printf("C says: %s\n", message);
+        }
+        """,
+        # 可以添加额外的库依赖
+        libraries=[]
+    )
+    
+    # 编译并加载模块
+    if __name__ == "__main__":
+        ffi.compile()
+        from _math_operations import lib
+        
+        # 调用函数
+        print(f"5 + 7 = {lib.add(5, 7)}")
+        print(f"3.14 * 2.71 = {lib.multiply(3.14, 2.71):.2f}")
+        lib.print_message(b"CFFI is awesome!")
+
+### 21.正则表达式与re [学习链接](https://www.runoob.com/python3/python3-reg-expressions.html)
+
+    一般用于网络或者大数据检索
+    正则表达式本身就是一种搜索方式，只不过在python中采用re
+    AI时代，这部分了解即可，不需要背诵八股文一般了
+    re.match(pattern, string, flags=0)
+
+### 22.让官网收录你的第三方库 注意__future__方法
+
+### 23.协程，与生成器相对应，
+    
+    协程，数据的消费者，与多线程等毫无关系
+    非常有意思的一个东西， yield关键字真的很神奇
+
+
+# 未来计划
 
