@@ -1,0 +1,1154 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{fancyhdr}  % 页眉页脚设置
+\usepackage{lastpage}  % 获取总页数
+\usepackage{enumitem}  % 列表美化
+\usepackage{xcolor}    % 颜色支持
+\usepackage{empheq}		%优化编号
+\usepackage{tcolorbox}		%补充内容
+
+% 页面设置
+
+
+\geometry{a4paper, margin=1.2in}  % 稍宽边距，提升可读性
+\linespread{1.1}  % 行间距调整
+
+% 页眉页脚配置
+\pagestyle{fancy}
+\fancyhf{}  % 清除默认设置
+\lhead{\small 数学物理方法笔记}  % 左页眉
+\rhead{\small \thepage/\pageref{LastPage}}  % 右页眉：当前页/总页数
+
+\renewcommand{\headrulewidth}{0.4pt}  % 页眉线
+\renewcommand{\footrulewidth}{0.2pt}  % 页脚线
+
+% 列表样式调整
+\setlist[itemize]{leftmargin=2em, labelsep=0.5em}  % 项目符号列表缩进
+\setlist[enumerate]{leftmargin=2em, labelsep=0.5em}  % 编号列表缩进
+
+\title{\textbf{数学物理方法核心笔记}}
+\author{}
+\date{}
+
+\begin{document}
+	\maketitle
+	\section*{前言}
+
+	
+	对于本部分整理的相关公式与概念，需重点关注各知识点的适用条件与式子形式。可以对照目录来默写检验掌握程度。
+	
+	实际应用中，所遇到的问题往往无法完全匹配公式的预设适用条件，也难以直接对应标准式子形式。此时需要遵循“像什么找什么”的原则进行化归——优先寻找实际问题与公式中形式相似的部分，以此为切入点对问题进行等效变换、条件修正或模型简化，将其转化为符合公式适用条件与式子形式的标准状态，再代入相关公式进行分析与计算。
+	
+	内容尽可能突出重点，聚焦通用方法，在精简表达的原则上为便于记忆引入通俗但不一定严谨的表述。	
+
+
+	\pagebreak
+
+	% 目录（方便查阅）
+	\tableofcontents
+	\vspace{1cm}
+	\hrule  % 分隔线
+	\vspace{1cm}
+	
+	
+	
+	\pagebreak
+	
+	
+
+	
+	
+	\section{基本问题}
+	
+	\subsection{基本物理方程模型}
+	常见的基本物理方程模型可分为以下三类，他们均为施图姆 - 刘维尔方程（Sturm-Liouville equation,简称SL方程或施刘方程）：
+	
+	\subsubsection{波动方程}
+	方程形式为：
+	\[
+	 \frac{\partial^2 u}{\partial t^2} = a^2\Delta u 
+	\]
+	其中 $\Delta$ 为拉普拉斯算子，$a$ 为与介质特性相关的常数，该方程用于描述空间中不同维度下的振动、波动传播问题（如机械波、电磁波的传播）。
+	
+	数学上，属于双曲型方程。
+	
+	\subsubsection{扩散方程}
+	方程形式为：
+	\[
+	 \frac{\partial u}{\partial t} = a^2\Delta u 
+	\]
+	该方程适用于分析热传导过程中温度的时空分布，以及物质扩散过程中浓度的变化规律等动态输运问题。
+	
+	数学上属于抛物形方程。
+	
+	\subsubsection{恒定场方程}
+	静态恒定场的核心方程为拉普拉斯方程：
+	\[
+	\Delta u = 0
+	\]
+	该方程用于描述空间中不随时间变化的恒定场分布（如静电场、稳定温度场、无旋流场等）。
+	
+	数学上属于椭圆形方程。
+	
+	\subsection{傅里叶展开与傅里叶变换}
+	
+	\subsubsection{标准傅里叶展开}
+	标准傅里叶展开：当 \( f(t) \) 的周期为 \( 2\pi \)，或 \( f(t) \) 延拓后的函数周期为 \( 2\pi \) 时，可在正交函数系 \( \{\cos(nt)\}、\{\sin(nt)\} \) 下对其展开，该展开形式称为标准傅里叶展开。
+	
+	\paragraph{适用条件（狄利克雷条件）}
+	设周期函数 \( f(t) \) 周期为 \( T \)，在一个周期内满足连续或仅有有限个第一类间断点，且仅有有限个极值点。（标准傅里叶展开需要$T = 2\pi $）
+	
+	\paragraph{实数形式（展开式与系数计算式）}
+	\[
+	\left\{
+	\begin{aligned}
+		&f(t) = a_0 + \sum_{n = 1}^{\infty} \left[ a_n \cos(nt) + b_n \sin(nt) \right] \\
+		&a_0 = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) dt \\
+		&a_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \cos(nt) dt \quad (n = 1,2,3,\dots) \\
+		&b_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \sin(nt) dt \quad (n = 1,2,3,\dots)
+	\end{aligned}
+	\right.
+	\]
+	
+	\paragraph{复数形式（展开式与系数计算式）}
+	\[
+	\left\{
+	\begin{aligned}
+		&f(t) = a_0 + \sum_{n = 1}^{\infty} F_n e^{int} \\
+		&a_0 = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) dt \\
+		&F_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) e^{-int} dt \quad (n = 1,2,3,\dots)
+	\end{aligned}
+	\right.
+	\]
+	
+	\paragraph{补充与理解}
+	傅里叶展开的实质是对波段的分解。当基底函数系中 \( n = 1 \) 时，对应基波，基波的周期与原函数的周期一致；\( n > 1 \) 时为谐波，谐波周期为原函数周期的 \( 1/n \)，整体通过基波与各次谐波叠加还原原函数。
+	
+	\textbf{注意正逆变换的正负号问题！！！}
+	\subsubsection{其他函数系下的傅里叶展开}
+	对于任意正交函数系 \( \{p_n(t)\} \)，均可对周期函数进行傅里叶展开（广义傅里叶展开），具体如下：
+	
+	\paragraph{适用条件}
+	\begin{itemize}
+		\item 函数 \( f(t) \) 需符合狄利克雷条件；
+		\item 正交函数系 \( \{p_n(t)\} \) 的周期与函数 \( f(t) \) 的周期一致，均为 \( T \)。
+	\end{itemize}
+	
+	\paragraph{展开形式（展开式与系数计算式）}
+	\[
+	\left\{
+	\begin{aligned}
+		&f(t) = \sum_{n = 0}^{\infty} c_n p_n(t) \\
+		&c_n = \frac{1}{T} \int_{-\frac{T}{2}}^{\frac{T}{2}} f(t) p_n(t) dt
+	\end{aligned}
+	\right.
+	\]
+	
+	\subsubsection{标准傅里叶变换（FT）}
+	傅里叶展开是傅里叶变换的离散形式，傅里叶变换是傅里叶展开的连续形式，核心是将展开式中的求和符号替换为积分符号。
+	
+	\paragraph{实质}
+	傅里叶变换是函数 \( y = f(\omega) \) 从 \( y\text{-}\omega \) 平面向 \( y\text{-}t \) 平面的线性映射，且为可逆映射，可表示为 \( f(\omega) \leftrightarrow F(t) \)。映射过程中，\( f(\omega) \to F(t) \) 时 \( F(t) \) 为 \( f(\omega) \) 的像函数，因可逆，二者互为像函数。
+	
+	\paragraph{适用条件}
+	函数 \( f(\omega) \) 或 \( f(\omega) \) 的周期延拓需符合狄利克雷条件。
+	
+	\paragraph{实数形式（展开式与系数计算式）}
+	\[
+	\left\{
+	\begin{aligned}
+		&f(\omega) = \int_{-\infty}^{+\infty} \left[ A(t) \cos(t \omega) + B(t) \sin(t \omega) \right] dt \\
+		&A(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} f(\omega) \cos(t \omega) d\omega \\
+		&B(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} f(\omega) \sin(t \omega) d\omega
+	\end{aligned}
+	\right.
+	\]
+	
+	\paragraph{复数形式（展开式与系数计算式）}
+	\[
+	\left\{
+	\begin{aligned}
+		&f(\omega) = \int_{-\infty}^{+\infty} F(t) e^{it \omega} dt \\
+		&F(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} f(\omega) e^{-it \omega} d\omega
+	\end{aligned}
+	\right.
+	\]
+	\textbf{备注：}  \( e^{it \omega} \) 称为从\( F(t) \) 到  \( f(\omega) \)  的傅里叶变换的核函数。注意正逆变换的正负号和系数差距。\textbf{记忆提示：}即正变换取正，负变换取负。
+	
+	\subsubsection{傅里叶变换的性质}
+	
+	\paragraph{线性}
+	若 \( f_1(\omega) \leftrightarrow F_1(t) \)，\( f_2(\omega) \leftrightarrow F_2(t) \)，则 \( f_1(\omega) + f_2(\omega) \leftrightarrow F_1(t) + F_2(t) \)。
+	
+	\paragraph{位移性（时移与频移）}
+	当函数自变量有一定增量时，对应的像函数会乘以一个以该增量为自变量取值的核函数因子，具体为：
+	\begin{itemize}
+		\item 时移性：\( f(\omega + \omega_0) \to e^{it \omega_0} F(t) \)
+		\item 频移性：\( e^{-it_0 \omega} f(\omega) \to F(t + t_0) \)
+	\end{itemize}
+	
+	\paragraph{反比例放缩性}
+	若 \( f(\omega) \leftrightarrow F(t) \)，则 \( f(a\omega) \leftrightarrow \frac{1}{|a|}F\left( \frac{t}{a} \right) \)（\( a \neq 0 \)）。
+	即原函数自变量扩大或缩小 \( a \) 倍时，所得像函数在频域平面空间对应缩小或扩大 \( \frac{1}{|a|} \) 倍。（注意纵坐标有绝对值）
+	
+	\paragraph{微商性质}
+	\begin{enumerate}[label=\arabic*.]
+		\item 这是一元函数傅里叶变换的微分性质。若 \( f(\omega) \leftrightarrow F(t) \)，且满足 \( \omega \to \infty \) 时 \( f(\omega) \to 0 \)，则
+		\[
+		\begin{cases} 
+			f^{(n)}(\omega) \leftrightarrow (it)^n F(t) \\
+			F^{(n)}(t) \leftrightarrow (-i\omega)^n f(\omega)
+		\end{cases}
+		\]
+		\item 对于多元函数。设多元函数 \( u(\omega, x_1, x_2, x_3, \dots) \)，记 \( \mathcal{F}_x[\cdot] \) 为对变量 \( x \) 的傅里叶变换，则：
+		\begin{itemize}
+			\item 对 \( x_1 \) 的 \( n \) 阶偏导数满足：
+			\[
+			\mathcal{F}_{x_1}\left[ \frac{\partial^n  u(\omega, x_1, x_2, x_3, \dots)}{\partial x_1^n} \right] = (it)^n \mathcal{F}_x\left[  u(\omega, x_1, x_2, x_3, \dots) \right]
+			\]
+			\item 对非变换变量（如 \( \omega \)）求偏导，变换结果保持不变：
+			\[
+			\mathcal{F}_{x_1}\left[ \frac{\partial^n  u(\omega, x_1, x_2, x_3, \dots)}{\partial \omega^n} \right] = \frac{\partial^n}{\partial \omega^n} \mathcal{F}_x\left[  u(\omega, x_1, x_2, x_3, \dots) \right]
+			\]
+		\end{itemize}
+	\end{enumerate}
+	
+	\paragraph{积分性质}
+	若 \( f(\omega) \leftrightarrow F(t) \)，且满足 \( \omega \to \infty \) 时 \( f(\omega) \to 0 \)，同时 \( f(\omega) \) 在 \( (-\infty,+\infty) \) 上连续，则
+	\[
+	\int_{-\infty}^\omega f(\tau) d\tau \leftrightarrow \frac{1}{it} F(t)
+	\]
+	注：积分性质不可逆，像函数的积分不一定能推出原函数，因像函数可能非连续，不满足傅里叶逆变换的收敛条件。
+	
+	\paragraph{卷积性质}
+	
+	若 \( f_1(\omega) \leftrightarrow F_1(t) \)，\( f_2(\omega) \leftrightarrow F_2(t) \)，则
+	\[
+	f_1(\omega) * f_2(\omega) \leftrightarrow F_1(t) F_2(t)
+	\]
+	
+	
+	
+	\begin{tcolorbox}[
+		colback=blue!5,       % 浅蓝背景
+		colframe=blue!70,     % 深蓝边框
+		rounded corners,      % 圆角
+		title=卷积定义与理解, % 标题栏（中文逗号统一）
+		fonttitle=\bfseries,  % 标题加粗（可选优化）
+		left=1em,             % 内边距优化（避免内容贴边）
+		right=1em,
+		top=0.5em,
+		bottom=0.5em
+		]
+		卷积是两个函数之间的一种运算，在后续的$\delta$函数的性质、纯强迫振动的解等多个内容中均会出现该运算形式，因此单独说明如下。
+		
+		设两个函数 $f(t)$ 和 $g(t)$，二者关于变量 $t$ 的卷积记作 $\left[f\ast g\right](t)$ 或 $f(t)\ast g(t)$，其定义式为：
+		\[
+		\left[f\ast g\right](t)=\int_{-\infty}^{+\infty}f(\tau)g(t-\tau)\,\mathrm{d}\tau
+		\]
+		
+		卷积运算满足以下基本性质：
+		\begin{enumerate}[label=\arabic*., leftmargin=2em, itemsep=0.3em]
+			\item \textbf{交换律}：$f(t)\ast g(t)=g(t)\ast f(t)$；
+			\item \textbf{分配律}：$f(t)\ast\left[g(t)+h(t)\right]=f(t)\ast g(t)+f(t)\ast h(t)$；
+			\item \textbf{结合律}：$\left[f(t)\ast g(t)\right]\ast h(t)=f(t)\ast\left[g(t)\ast h(t)\right]$；
+			\item \textbf{平移不变性}：若 $\left[f\ast g\right](t)=h(t)$，则 $\left[f(t-t_0)\ast g(t)\right]=h(t-t_0)$。
+		\end{enumerate}
+		
+		\textbf{特殊情形：因果卷积}
+		若 $t<0$ 时，$f(t)\equiv0$ 且 $g(t)\equiv0$，则称 $f(t)$ 和 $g(t)$ 为\textbf{因果函数}，二者的卷积称为\textbf{因果卷积}。
+		此时卷积的积分上下限可简化，即：
+		\[
+		\int_{-\infty}^{+\infty}f(\tau)g(t-\tau)\,\mathrm{d}\tau=\int_{0}^{t}f(\tau)g(t-\tau)\,\mathrm{d}\tau
+		\]
+	\end{tcolorbox}
+	
+	\subsection{线性齐次边界条件下的本征值与本征函数}
+	
+	\subsubsection{核心前提}
+	孤立一维系统的固定边界问题。
+	\begin{itemize}
+		\item 讨论区间：$ x \in [0, l] $（闭区间），表示双边固定边界
+		\item 方程形式：
+		 $$ f''(x) + \lambda f(x) = 0 $$
+	\end{itemize}
+	
+	\subsubsection{不同线性齐次边界条件下的结果}
+	
+	\paragraph{1. 一类边界条件（Dirichlet 边界条件）}
+	\begin{itemize}
+		\item 边界条件：$ f(0) = 0 $，$ f(l) = 0 $
+		\item 本征值：$ \lambda = \frac{n^2 \pi^2}{l^2} $（$ n = 1, 2, 3, \dots $，$ n $ 为正整数）
+		\item 本征函数：$ f(x) = C_n \sin\left( \frac{n \pi x}{l} \right) $（$ C_n $ 为任意非零常数）
+	\end{itemize}
+	
+	\paragraph{2. 二类边界条件（Neumann 边界条件）}
+	\begin{itemize}
+		\item 边界条件：$ f'(0) = 0 $，$ f'(l) = 0 $（一阶导数在区间端点为0）
+		\item 本征值：$ \lambda = \frac{n^2 \pi^2}{l^2} $（$ n = 0, 1, 2, \dots $，$ n=0 $ 时 $ \lambda=0 $）
+		\item 本征函数：$ f(x) = C_n \cos\left( \frac{n \pi x}{l} \right) $（$ C_n $ 为任意非零常数；$ n=0 $ 时 $ f(x)=C_0 $，为常数本征函数）
+	\end{itemize}
+	
+	\paragraph{3. 三类边界条件（Robin 边界条件）}  \textbf{注：}只作了解，不需要记忆解的具体形式。
+	
+	\begin{itemize}
+		\item 边界条件：$ \alpha_1 f'(0) + \beta_1 f(0) = 0 $，$ \alpha_2 f'(l) + \beta_2 f(l) = 0 $（$ \alpha_1, \beta_1 $ 不同时为 0；$ \alpha_2, \beta_2 $ 不同时为 0，均为常数）
+		\item 本征值：$ \lambda_n $ 需通过求解 “超越方程” 得到（无统一的显式公式，依赖 $ \alpha_1, \beta_1, \alpha_2, \beta_2 $ 的具体取值）
+		\item 本征函数：$ f_n(x) = C_n \left[ A_n \sin\left( \sqrt{\lambda_n} x \right) + B_n \cos\left( \sqrt{\lambda_n} x \right) \right] $（$ C_n $ 为任意非零常数；$ A_n, B_n $ 为系数，由边界条件确定，不会是单纯的正弦 / 余弦形式）
+	\end{itemize}
+	
+	\subsection{圆坐标系下的拉普拉斯方程}
+	
+	拉普拉斯方程 $\Delta u = 0$ 在圆坐标系下的展开形式为：
+	\[
+	\frac{\partial^2 u}{\partial r^2}+\frac{1}{r}\frac{\partial u}{\partial r}+\frac{1}{r^2}\frac{\partial^2 u}{\partial \varphi^2}=0
+	\]
+	
+	采用\textbf{分离变量法}，设 $u = R(r)\Phi(\varphi)$，代入方程可分离得到如下方程组：
+	\[
+	\begin{cases}
+		\Phi''+\lambda\Phi=0 \\
+		r^2 R''+r R'-\lambda R=0
+	\end{cases}
+	\]
+	
+	\subsubsection{欧拉方程}
+	标准欧拉方程的形式为：
+	\[
+	x^2 y'' + a x y' + b y = 0 \qquad (x>0)
+	\]
+	令 $a=1$、$b=-\lambda$，则方程 $ r^2 R''+r R'-\lambda R=0 $（$ r > 0 $，$ \lambda $ 为常数）为欧拉方程（原 $x>0$ 对应极径 $r>0$，圆坐标系物理意义）。
+	
+	\subsubsection{不同 $\lambda$ 取值下的通解}
+	\begin{itemize}[leftmargin=2em, itemsep=0.5em]
+		\item 当 $\lambda = 0$ 时，通解形式：$ f(r) = C + D \cdot \ln r $；
+		\item 当 $\lambda \neq 0$ 时，通解形式：$ f(r) = C \cdot r^{\sqrt{\lambda}} + D \cdot r^{-\sqrt{\lambda}} $。
+	\end{itemize}
+	
+	\subsection{齐次条件下的非齐次方程的解（纯强迫振动）}
+	
+	\subsubsection{核心方程与前提}
+	\begin{itemize}
+		\item 方程类型：纯强迫振动的非齐次波动方程
+		\item 方程形式：$ \frac{\partial^2 u}{\partial t^2} - a^2 \frac{\partial^2 u}{\partial x^2} = f(x, t) $（$ a $ 为常数，$ f(x,t) $ 为非齐次项/强迫项）
+		\item 研究范围：仅讨论一类、二类齐次边界条件（三类边界条件下的本征值无统一显式公式，本征函数为正弦与余弦的线性组合，展开形式过于多样复杂，暂不深入讨论）
+	\end{itemize}
+	\subsubsection{不同边界条件下的解形式}
+	
+	\paragraph{1. 一类齐次边界条件（$ u(0,t)=0 $，$ u(l,t)=0 $）}
+	展开基函数（本征函数系）：
+	\[
+	\sin\left( \frac{n \pi x}{l} \right) \quad (n=1,2,3,\dots)
+	\]
+	方程的解满足：
+	\begin{empheq}[left=\empheqlbrace]{align}
+		u(x, t) &= \sum_{n=1}^{\infty} T_n(t) \cdot \sin\left( \frac{n \pi x}{l} \right), \label{u} \\
+	T_n(t) &= \frac{l}{n \pi a} \int_{0}^{t} F_n(\tau) \cdot \sin\left( \frac{n \pi a}{l} (t - \tau) \right) \mathrm{d}\tau, \quad (n \geq 1) , \label{T} \\
+		F_n(t) &= \frac{2}{l} \int_{0}^{l} f(x, t) \cdot \sin\left( \frac{n \pi x}{l} \right) \mathrm{d}x. \label{F}
+	\end{empheq}
+	
+	\textbf{记忆要诀：}\ref{u}式是分离变量法的通解形式，\ref{T}式是对于傅里叶展开系数的关于基函数的卷积，
+	
+	\paragraph{2. 二类齐次边界条件（$ u'(0,t)=0 $，$ u'(l,t)=0 $）}
+	展开基函数（本征函数系）：
+	\[
+	\cos\left( \frac{n \pi x}{l} \right) \quad (n=0,1,2,\dots, \, n=0 \text{ 对应常数项})
+	\]
+	方程的解满足：
+	\[
+	\left\{
+	\begin{aligned}
+		u(x, t) &= \frac{1}{2}T_0(t) + \sum_{n=1}^{\infty} T_n(t) \cdot \cos\left( \frac{n \pi x}{l} \right), \\
+		T_0(t) &= \int_{0}^{t} F_0(\tau) (t - \tau) \mathrm{d}\tau, \\
+		T_n(t) &= \frac{l}{n \pi a} \int_{0}^{t} F_n(\tau) \cdot \cos\left( \frac{n \pi a}{l} (t - \tau) \right) \mathrm{d}\tau, \quad (n \geq 1) \\
+		F_0(t) &= \frac{2}{l} \int_{0}^{l} f(x, t) \mathrm{d}x, \\
+		F_n(t) &= \frac{2}{l} \int_{0}^{l} f(x, t) \cdot \cos\left( \frac{n \pi x}{l} \right) \mathrm{d}x, \quad (n \geq 1)
+	\end{aligned}
+	\right.
+	\]
+	\textbf{记忆要诀：}理解同上一样，这里因为$n = 0$的情况下基函数取$\cos0 = 1$，同时保证分母不为$0$有单独调整。
+	\subsection{非齐次边界条件的分离辅助直线法}
+	
+	\subsubsection{原问题的方程与定解条件}
+	
+	\paragraph{1. 核心方程}
+	当$ x \in [0, l] $，$ t > 0 $ 时
+	
+	$$ \frac{\partial^2 u}{\partial t^2} - a^2 \frac{\partial^2 u}{\partial x^2} = F(x, t) $$
+	
+	（其中$ a $ 为波速常数，自由项为 $ F(x, t) $）
+	
+	\paragraph{2. 边界条件}
+	\begin{itemize}
+		\item $ u(0, t) = u_1(t) $
+		\item $ u(l, t) = u_2(t) $
+		
+	\end{itemize}
+	
+	\paragraph{3. 初始条件}
+	\begin{itemize}
+		\item $ u(x, 0) = f(x) $
+		\item $ \frac{\partial u}{\partial t}(x, 0) = g(x) $
+	\end{itemize}
+	
+	\subsubsection{核心变换与转化后的定解问题}
+	
+	\paragraph{1. 变换形式}
+	$ u(x, t) = v(x, t) + L(x, t) $
+	\begin{itemize}
+		\item 辅助一次函数，形式为 $$ L(x, t) = u_1(t) + \frac{u_2(t) - u_1(t)}{l} \cdot x $$
+	\end{itemize}
+	
+	\paragraph{2. 转化后的定解问题}
+	\[
+	\begin{cases}
+		\frac{\partial^2 v}{\partial t^2} - a^2 \frac{\partial^2 v}{\partial x^2} = F_1(x, t) \\[6pt]
+		\begin{aligned}
+			& v(0, t) = 0, \quad v(l, t) = 0 \\[6pt]
+			& v(x, 0) = f_1(x), \quad \frac{\partial v}{\partial t}(x, 0) = g_1(x)
+		\end{aligned}
+	\end{cases}
+	\]
+	
+	\paragraph{3.转化后定解问题中函数的定义}
+	\[
+	\begin{cases}
+		\begin{aligned}
+			& F_1(x, t) = F(x, t) - \frac{\partial^2 L(x, t)}{\partial t^2}  \\[6pt]
+			& f_1(x) = f(x) - L(x, 0)  \\[6pt]
+			& g_1(x) = g(x) - \left. \frac{\partial L(x, t)}{\partial t} \right|_{t=0} 
+		\end{aligned}
+	\end{cases}
+	\]
+	\textbf{注意：}$F_1$中对变量$t$的偏导阶数与原式子中相同，随之修改。
+	
+	
+	\section{特殊函数}
+	
+	\subsection{伽马函数}
+	
+	\subsubsection{定义}
+	伽马函数的积分定义式为：
+	\[
+	\Gamma(z)=\int_{0}^{+\infty}t^{z-1}e^{-t}\mathrm{d}t
+	\]
+	定义域：$\boldsymbol{\text{Re}(z)>0}$（$z$ 的实部大于 0）。
+	
+	\subsubsection{核心性质}
+	伽马函数满足如下递推关系：
+	\[
+	\Gamma(z+1)=z\cdot\Gamma(z)
+	\]
+	
+	\paragraph{基于递推式的解析延拓}
+	利用递推式 $\Gamma(z)=\frac{\Gamma(z+1)}{z}$，可将伽马函数的定义域 \textbf{解析延拓至 $\text{Re}(z)\leq0$ 的区域}，分两种情形讨论：
+	\begin{enumerate}[label=\arabic*., leftmargin=2em, itemsep=0.3em]
+		\item \textbf{$\text{Re}(z)$ 为负整数} \\
+		当 $z=-n$（$n$ 为正整数）时，代入递推式会出现分母为 0 的情况，因此 $z=-1,-2,-3,\dots$ 是伽马函数的 \textbf{一阶极点}。
+		\item \textbf{$\text{Re}(z)$ 为负的非整数} \\
+		当 $z$ 的实部小于 0 且 $z$ 不是负整数时，可通过递推式 $\Gamma(z)=\frac{\Gamma(z+k)}{z(z+1)\cdots(z+k-1)}$（选取正整数 $k$ 使得 $\text{Re}(z+k)>0$）进行计算。
+	\end{enumerate}
+	
+	\subsubsection{重要推论}
+	\paragraph{伽马函数与阶乘的关系}
+	当 $z$ 为正整数 $n$ 时，结合递推性质可得：
+	\[
+	\Gamma(n)=(n-1)!
+	\]
+	
+	\paragraph{广义二项式系数}
+	由阶乘定义的二项式系数 $$C_n^k=\frac{n!}{k!(n-k)!}$$
+	
+	结合伽马函数与阶乘的关系，可拓展为 \textbf{广义二项式系数}：
+	\[
+	C_\alpha^k=\frac{\Gamma(\alpha+1)}{\Gamma(k+1)\cdot\Gamma(\alpha-k+1)}
+	\]
+	其中 $\alpha$ 可为任意复数，$k$ 为非负整数，\textbf{式中伽马函数均采用解析延拓后的形式}。
+	
+	\paragraph{非整数次幂的二项式展开}
+	基于广义二项式系数，可实现非整数次幂的二项式展开，公式为：
+	\[
+	(a+b)^\alpha=\sum_{k=0}^{\infty}C_\alpha^k a^{\alpha-k}b^k
+	\]
+	其中 $\alpha$ 为任意非整数复数，\textbf{并不是一定能展开，展开式要判断收敛性。}
+	
+	\subsubsection{特殊数值}
+	伽马函数在 $z=\frac{1}{2}$ 处的特殊值为：
+	\[
+	\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi}
+	\]
+	
+	\subsubsection{勒让德方程的通解}
+	
+	\paragraph{通解形式}
+	\[
+	y(x) = C_1 y_1(x) + C_2 y_2(x)
+	\]
+	其中，\(C_1\)、\(C_2\)为任意常数；\(y_1(x)\)、\(y_2(x)\)为方程的两个线性无关特解。
+	
+	\paragraph{特解的幂级数形式及系数表达式}
+	\[
+	\begin{cases} 
+		y_1(x) = \sum_{n=0}^{\infty} a_n x^{2n} \\
+		y_2(x) = \sum_{n=0}^{\infty} b_n x^{2n + 1}
+	\end{cases}
+	\]
+	其中：
+	\[
+	a_n = \frac{\prod_{k=1}^{n} (2k - 2 - l)}{(2n)!}, \quad 
+	b_n = \frac{\prod_{k=1}^{n} (4k - 1 - l)}{(2n + 1)!}
+	\]
+	
+	\subsubsection{勒让德多项式函数（含勒让德数列）}
+	
+	\paragraph{勒让德数列}
+	\[
+	c_{n+2} = \frac{(n - l)(n + l + 1)}{(n + 2)(n + 1)} \cdot c_n
+	\]
+	勒让德数列由上述递推公式生成，包含\(a_n\)构成的偶次幂系数数列和\(b_n\)构成的奇次幂系数数列。
+	
+	\paragraph{勒让德多项式的三种定义形式}
+	\begin{itemize}
+		\item 幂级数定义：
+		\[
+		P_l(x) = \sum_{s=0}^{\lfloor \frac{l}{2} \rfloor} c_{l - 2s} \cdot x^{l - 2s}
+		\]
+		\item 罗德里格斯公式：
+		\[
+		P_l(x) = \frac{1}{2^l \cdot l!} \cdot \frac{d^l}{dx^l} \left( (1 - x^2)^l \right)
+		\]
+		\item 生成函数定义：
+		\[
+		\frac{1}{\sqrt{1 + r^2 - 2rx}} = \sum_{l=0}^{\infty} P_l(x) r^l
+		\]
+		（\(r = 0\)处的泰勒展开，\(r^l\)的系数即为\(P_l(x)\)）
+	\end{itemize}
+	
+	\paragraph{勒让德多项式的特殊性质}
+	
+	\subparagraph{（1）递推性}
+	\begin{itemize}
+		\item 函数递推性：\((2l + 1) x P_l(x) = (l + 1) P_{l + 1}(x) + l P_{l - 1}(x)\)
+		\item 函数递推性的导数形式：\((l + 1) P_{l + 1}'(x) - (2l + 1) P_l(x) - (2l + 1) x P_l'(x) + l P_{l - 1}'(x) = 0\)
+		\item 导数递推性：\(P_{l - 1}'(x) = x P_l'(x) - l P_l(x)\)
+	\end{itemize}
+	
+	\subparagraph{（2）正交性}
+	\begin{itemize}
+		\item 核心性质：\(\int_{-1}^{1} P_l(x) P_m(x) dx = 0\)（其中\(l \neq m\)，\(l\)、\(m\)均为非负整数）
+	\end{itemize}
+	
+	\subparagraph{（3）奇偶性}
+
+		 \[P_l(-x) = (-1)^l P_l(x)\]
+
+	
+	\subparagraph{（4）首项（低阶多项式特例）}
+	\begin{itemize}
+		\item 偶数首项\(P_0(x) = 1\)
+		\item 奇数首项\(P_1(x) = x\)
+	\end{itemize}
+	
+
+	
+	\subsubsection{傅里叶-勒让德展开（基于正交性）}
+	
+	展开形式：
+	\[
+	f(x) = \sum_{n=0}^{\infty} a_n P_n(x)
+	\]
+	
+	展开系数：
+	\[
+	a_n = \frac{2n + 1}{2} \int_{-1}^{1} f(x) P_n(x) dx
+	\]
+	
+	\subsection{ 球函数}
+	
+	\subsubsection{伴随勒让德函数}
+	
+	\paragraph{伴随勒让德方程基本形式}
+	\[
+	\frac{d}{dx}\left[(1 - x^2) \frac{df(x)}{dx}\right] + \left[l(l + 1) - \frac{m^2}{1 - x^2}\right] f(x) = 0
+	\]
+	其中阶数 \( l \geq 0 \) 为非负整数，伴随项系数\( m = 0, 1, 2, \dots, l \) 为整数，\( x \in [-1, 1] \)。
+	
+	\paragraph{方程的解}
+	伴随勒让德方程的解为伴随勒让德函数，记为 \( P_l^m(x) \)。
+	
+	\paragraph{与勒让德函数的关系}
+	伴随勒让德函数与勒让德函数的关联：
+	\[
+	P_l^m(x)= \frac{1}{2^l l!} (1 - x^2)^{\frac{m}{2}} \frac{d^{l + m}}{dx^{l + m}} (x^2 - 1)^l = (1 - x^2)^{\frac{m}{2}} P_l^{(m)}(x)
+	\]
+	
+	
+	其中 \( P_l^{(m)}(x) \) 表示勒让德多项式 \( P_l(x) \) 的 \( m \) 阶导数（牛顿导数表示法）。
+	
+	当 \( m = 0 \) 时，\( P_l^0(x) = P_l(x) \)，退化为勒让德多项式。
+	
+	\paragraph{正交性与递推关系}
+	由 \( P_l^m(x) = (1 - x^2)^{\frac{m}{2}} P_l^{(m)}(x) \) 和 \( P_l(x) \) 的性质可直接推导得出伴随勒让德函数的正交性与递推关系。
+	
+	
+	
+	
+
+\iffalse		
+
+-------------------------------------------------
+			
+				\subsubsection{球空间的亥姆霍兹方程与特征方程}
+			
+			\paragraph{亥姆霍兹方程形式}
+			球空间中亥姆霍兹方程（空间特征方程）为：
+			\[
+			\Delta u + k^2 u = 0
+			\]
+				特别的，$k = 0$时，上式化为球空间的静态场方程（拉普拉斯方程）：
+				\[
+				\Delta u = 0
+				\]
+				其中拉普拉斯算符 \( \Delta u \) 的球坐标（\( r, \theta, \varphi \)）表达式为：
+				\[
+				\Delta u = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial u}{\partial r} \right) + \frac{1}{r^2 \sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial u}{\partial \theta} \right) + \frac{1}{r^2 \sin^2\theta} \frac{\partial^2 u}{\partial \varphi^2}
+				\]
+				
+				\paragraph{变量分离与方程拆分}
+				令 \( u(r, \theta, \varphi) = R(r) Y(\theta, \varphi) \)（\( R(r) \) 为径向函数，\( Y(\theta, \varphi) \) 为角度函数），代入亥姆霍兹方程分离变量，得到两个独立方程：
+				
+				\subparagraph{径向方程（关于 \( R(r) \)）}
+				\[
+				\frac{d}{dr} \left( r^2 \frac{dR}{dr} \right) + \left( k^2 r^2 - l(l + 1) \right) R = 0
+				\]
+				- 项的记忆：\( \frac{d}{dr} \left( r^2 \frac{dR}{dr} \right) \) 为核函数项（符合SL方程的核函数方程）；\( \left( k^2 r^2 - l(l + 1) \right) R \) 为勒让德项（\( l \geq 0 \) 为非负整数）。
+				
+				\subparagraph{角度方程（关于 \( Y(\theta, \varphi) \)）}
+				\[
+				\frac{1}{\sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial Y}{\partial \theta} \right) + \frac{1}{\sin^2\theta} \frac{\partial^2 Y}{\partial \varphi^2} + l(l + 1) Y = 0
+				\]
+				- 核心记忆：该方程为球函数方程，其中角度函数 \( Y(\theta, \varphi) \) 称为球函数；
+				
+				- 项的记忆：\( \frac{1}{\sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial Y}{\partial \theta} \right) \) 为核函数项（符合SL方程的核函数方程）；\( \frac{\partial^2 Y}{\partial \varphi^2} \) 为正交项；\( l(l + 1) Y \) 为勒让德项。
+				
+				
+					令 \( u(r, \theta, \varphi) = R(r) Y(\theta, \varphi) \)进行分离变量，其中\( R(r) \) 为径向函数，\( Y(\theta, \varphi) \) 为球函数
+				
+				
+				\subsubsection{球函数固有值 \( l、m \) 下的特解}
+				其中，\( l = 0, 1, 2, \dots, \infty \)；\( m = 0, 1, 2, \dots, l \)。可以用伴随勒让德函数表示，这也是球函数和伴随勒让德函数之间的关系。
+				
+				\paragraph{复数形式特解}
+				\[
+				Y_{l,m}(\theta, \varphi) = P_l^m(\cos\theta) e^{i m \varphi}
+				\]
+				（\( i \) 为虚数单位）
+				
+				\paragraph{实数形式特解}
+				\[
+				Y_{l,m}^{(1)}(\theta, \varphi) = P_l^m(\cos\theta) \cos(m\varphi)
+				\]
+				\[
+				Y_{l,m}^{(2)}(\theta, \varphi) = P_l^m(\cos\theta) \sin(m\varphi)
+				\]
+				
+
+	\paragraph{通解}
+	
+	\subparagraph{复数形式通解}
+	\[
+	Y(\theta, \varphi) = \sum_{l=0}^{\infty} \sum_{m=0}^{l} Y_{l,m}(\theta, \varphi) = \sum_{l=0}^{\infty} \sum_{m=0}^{l} P_l^m(\cos\theta) e^{i m \varphi}
+	\]
+	
+	\subparagraph{实数形式通解}
+	\[
+	Y(\theta, \varphi) = \sum_{l=0}^{\infty} \sum_{m=0}^{l} \left[ A_{l,m} P_l^m(\cos\theta) \cos(m\varphi) + B_{l,m} P_l^m(\cos\theta) \sin(m\varphi) \right]
+	\]
+	其中 \( A_{l,m}、B_{l,m} \) 为常数，括号内两项相互正交，源于正交项的作用，\( \cos(m\varphi) \) 与 \( \sin(m\varphi) \) 为正交分解项，且当 \( (l,m) \neq (l',m') \) 时，不同特解间也满足正交性。
+					
+	
+	----------------------------------------------------------------------
+	
+	
+
+\fi 
+
+	
+	\subsubsection{球函数的定义过程}
+	
+	% 一、亥姆霍兹方程
+	\paragraph{亥姆霍兹方程}
+	球函数相关的亥姆霍兹方程（空间特征方程）为：
+	\[
+	\Delta u + k^2 u = 0
+	\]
+	
+	令 $u(r,\theta,\varphi)=R(r)Y(\theta,\varphi)$ 进行分离变量，其中：
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item $R(r)$ 为\textbf{径向函数}；
+		\item $Y(\theta,\varphi)$ 为\textbf{球函数}。
+	\end{itemize}
+	
+	即球函数就是球坐标系特征方程中关于角度的函数。
+	
+	% 二、球函数与伴随勒让德函数的关系
+	\paragraph{球函数与伴随勒让德函数的关系}
+	分离变量后得到的球函数方程，其固有值满足 $l=0,1,2,\dots,\infty$，$m=0,1,2,\dots,l$。
+	该方程可化为伴随勒让德方程的形式，因此球函数的解可用伴随勒让德函数表示。
+	
+	复数形式的特解为：
+	\[
+	Y_{lm}(\theta,\varphi)=P_{lm}(\cos\theta)\cdot e^{im\varphi}
+	\]
+	
+	% 三、k=0 时的方程解
+	\paragraph{$k=0$ 时的方程解}
+	当 $k=0$ 时，亥姆霍兹方程退化为球坐标系下的拉普拉斯方程：
+	\[
+	\Delta u = 0
+	\]
+	
+	其径向函数 $R(r)$ 的解为：
+	\[
+	R(r)=C\cdot r^l+D\cdot r^{-(l+1)}
+	\]
+	
+	结合球函数的复数形式特解，球坐标系下拉普拉斯方程的通解为：
+	\[
+	u(r,\theta,\varphi)=\sum_{l=0}^{\infty}\sum_{m=0}^{l}\left[C\cdot r^l+D\cdot r^{-(l+1)}\right]P_{lm}(\cos\theta)\cdot e^{im\varphi}
+	\]
+	
+	\subsubsection{球函数展开}
+	
+	任意函数 $f(\theta,\varphi)$ 均可在球函数系下展开，其展开式与展开系数公式联立为：
+	\[
+	\begin{cases}
+		f(\theta,\varphi)=\displaystyle\sum_{l=0}^{\infty}\sum_{m=-l}^{l}C_{lm}Y_{lm}(\theta,\varphi) \\
+		C_{lm}=\displaystyle\int_{0}^{\pi}\mathrm{d}\theta\int_{0}^{2\pi}\mathrm{d}\varphi\;f(\theta,\varphi)\overline{Y_{lm}(\theta,\varphi)}\sin\theta
+	\end{cases}
+	\]
+	其中：$\overline{Y_{lm}(\theta,\varphi)}$ 表示球函数 $Y_{lm}(\theta,\varphi)$ 的复共轭；$\sin\theta$ 为球坐标系下面积元积分的权重因子（源于球面积元 $\mathrm{d}S = \sin\theta\mathrm{d}\theta\mathrm{d}\varphi$）。
+	
+	
+	
+	\subsection{$\delta$函数}
+	
+	\subsubsection{定义}
+	标准$\delta$函数：直观定义为
+	\[
+	\delta(x)=
+	\begin{cases}
+		0, & x\neq0 \\
+		+\infty, & x = 0
+	\end{cases}
+	\]
+	且满足包络面积为一：
+	\[
+	\int_{-\infty}^{+\infty}\delta(x)dx = 1
+	\]
+	
+	广义$\delta$函数：记为$\delta(x - x_0)$，称为$x_0$处的$\delta$函数，是标准$\delta$函数的平移拓展，核心满足仅在$x = x_0$处为$+\infty$，其余位置为$0$，且
+	\[
+	\int_{-\infty}^{+\infty}\delta(x - x_0)dx = 1
+	\]
+	> 补充：以下若未声明为标准$\delta$函数，默认讨论广义$\delta$函数。
+	
+	\subsubsection{直观理解}
+	物理意义：$\delta$函数对应点电荷模型，描述集中于一点、总量为$1$的物理量（如电荷、质量）的分布密度，仅集中点密度为正无穷，其余位置为$0$，积分总量归一为$1$。
+	
+	数学图像：标准$\delta$函数是集中在$x = 0$处的正无穷高峰，峰下面积为$1$，峰外函数值与$x$轴重合，呈水平直线形态。
+	
+	\subsubsection{标准$\delta$函数的性质}
+	积分性质：若$a\neq0$、$b\neq0$，且$0\in[a,b]$，则
+	\[
+	\int_{a}^{b}\delta(x)dx = 1
+	\]
+	若$0\notin[a,b]$，则
+	\[
+	\int_{a}^{b}\delta(x)dx = 0
+	\]
+	
+	置换性质：设$f(x)$为连续函数，则
+	\[
+	\int_{-\infty}^{+\infty}f(x)\delta(x - x_0)dx = f(x_0)
+	\]
+	且
+	\[
+	f(x)\delta(x - x_0) = f(x_0)\delta(x - x_0)
+	\]
+	同时满足
+	\[
+	\int_{-\infty}^{+\infty}\delta'(x - x_0)f(x)dx = -f'(x_0)
+	\]
+	（$\delta'(x)$为$\delta$函数的导数）。
+	
+	奇偶性：$\delta$函数为偶函数，即
+	\[
+	\delta(x) = \delta(-x)
+	\]
+	$\delta$函数的导数为奇函数，即
+	\[
+	\delta'(-x) = -\delta'(x)
+	\]
+	
+	零点峰值性质：设$f(x)$为连续函数，且$f(x)=0$有$n$个互不相同的单根$x_k$（$k = 1,2,\dots,n$），则
+	\[
+	\delta[f(x)] = \sum_{k = 1}^{n}\frac{\delta(x - x_k)}{|f'(x_k)|}
+	\]
+	其图像由$f(x)$零点处的几条分立的、峰值为正无穷的尖峰竖线构成，且每一尖峰所占面积为对应零点处原函数导数的绝对值分之一，即$\frac{1}{|f'(x_k)|}$。
+	
+	\subsubsection{$\delta$函数判断函数系的完备性}
+	函数系定义在$[a,b]$上的 $\{f_n(x)\}$完备的充要条件为：
+	\[
+	\left\{
+	\begin{aligned}
+		&\int_{a}^{b}f_m(x)\overline{f_n(x)}dx = 0\quad(m\neq n) \\
+		&\int_{a}^{b}f_n(x)\overline{f_n(x)}dx = \lambda_n \\
+		&\sum_{n = 0}^{+\infty}f_n(x)\overline{f_n(x_0)} = \lambda_n\delta(x - x_0)
+	\end{aligned}
+	\right.
+	\]
+	其中$\lambda_n$是仅与$n$有关、与$x$无关的常数，$\overline{f_n(x)}$为$f_n(x)$的共轭。
+	
+	理解：正交归一函数系若在某一值处共轭叠加后坍缩为$\delta$函数形式，则为完备函数系。
+	
+		
+	\section{积分变换解定解问题}
+	
+	\subsection{傅里叶变换解定解问题}
+	
+	\subsubsection{适用问题（一维双边无界弦振动问题）}
+	自变量范围：\(x \in (-\infty,+\infty)\)，\(t \in [0,+\infty)\)
+	
+	定解方程：
+	\[
+	\frac{\partial^2 u(x,t)}{\partial t^2} = a^2 \frac{\partial^2 u(x,t)}{\partial x^2}
+	\]
+	
+	边界条件：\(x \to \pm\infty\)时，\(u(x,t) \to 0\)（满足傅里叶变换收敛条件）
+	
+	初始条件：
+	\begin{itemize}
+		\item \(u(x,0) = \varphi(x)\)
+		\item \(\frac{\partial u(x,0)}{\partial t} = \psi(x)\)
+	\end{itemize}
+	
+	\subsubsection{变换与求解过程}
+	变换结果：通过傅里叶变换，将\(u(x,t)\)从\(x\text{-}t\)空间映射到\(\omega\text{-}t\)空间（时域向频域线性映射），由微商性质得像函数\(U(\omega,t)\)：
+	\begin{itemize}
+		\item 方程转化为：
+		\[
+		\frac{\partial^2 U(\omega,t)}{\partial t^2} + a^2 \omega^2 U(\omega,t) = 0
+		\]
+		\item 初始条件转化为：\(U(\omega,0) = \int_{-\infty}^{+\infty} \varphi(x) e^{-i\omega x} dx = \Phi(\omega)\)；\(\frac{\partial U(\omega,0)}{\partial t} = \int_{-\infty}^{+\infty} \psi(x) e^{-i\omega x} dx = \Psi(\omega)\)
+	\end{itemize}
+	
+	求解结果：
+	\begin{itemize}
+		\item 像函数解：
+		\[
+		U(\omega,t) = \frac{1}{2} \left[ e^{ia\omega t} \left( \Phi(\omega) + \frac{\Psi(\omega)}{ia\omega} \right) + e^{-ia\omega t} \left( \Phi(\omega) - \frac{\Psi(\omega)}{ia\omega} \right) \right]
+		\]
+		\item 原函数解：傅里叶逆变换映射回\(x\text{-}t\)空间，\(u(x,t) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} U(\omega,t) e^{i\omega x} d\omega\)，化简为达朗贝尔公式：
+		\[
+		u(x,t) = \frac{1}{2}\left[\varphi(x + at)+\varphi(x - at)\right] + \frac{1}{2a}\int_{x - at}^{x + at}\psi(\xi)d\xi
+		\]
+	\end{itemize}
+	
+	
+	\subsection{拉普拉斯变换解定解问题}
+	
+	\subsubsection{变换本质}
+	拉普拉斯变换是傅里叶变换的复数形式，核心是时域向复频域的线性映射：将\(t\text{-}y\)空间的函数映射到\(p\text{-}y\)空间，复频\(p = \sigma + i\omega\)（\(\sigma\)实部，\(\omega\)虚部）。
+	
+	\subsubsection{变换前提与公式}
+	变换前提：需满足\(f(t)=\begin{cases}g(t), & t\geq0 \\ 0, & t<0\end{cases}\)，或函数可延拓为此形式（\(t<0\)时恒为\(0\)，仅考虑\(t\geq0\)形态）。
+	
+	标准公式：
+	\begin{itemize}
+		\item 正变换：
+		\[
+		F(p) = \int_{0}^{+\infty} f(t) e^{-pt} dt
+		\]
+		\item 逆变换：
+		\[
+		f(t) = \frac{1}{2\pi i} \int_{\sigma - i\infty}^{\sigma + i\infty} F(p) e^{pt} dp
+		\]
+	\end{itemize}
+	
+	\subsubsection{变换性质}
+	拉普拉斯变换为线性变换，性质与傅里叶变换一致，仅将傅里叶变换中的\(i\omega\)替换为\(p\)，线性、位移性、微商性、积分性、卷积性均适用。
+	
+	\subsubsection{适用问题（一维半无界弦/杆定解问题）}
+	自变量范围：\(x \in [0,+\infty)\)，\(t \in [0,+\infty)\)
+	
+	定解方程：
+	\[
+	\frac{\partial^2 u(x,t)}{\partial t^2} = a^2 \frac{\partial^2 u(x,t)}{\partial x^2}
+	\]
+	
+	边界条件：\(x = 0\)时，\(u(0,t) = f(t)\)；\(x \to +\infty\)时，\(u(x,t) = C(t)\)（\(C(t)\)为有界函数或常数）
+	
+	初始条件：
+	\begin{itemize}
+		\item \(u(x,0) = \varphi(x)\)
+		\item \(\frac{\partial u(x,0)}{\partial t} = \psi(x)\)
+	\end{itemize}
+	
+	\subsubsection{变换与求解过程}
+	
+	\paragraph{变换结果：}求解逻辑同傅里叶变换，将\(u(x,t)\)从\(x\text{-}t\)空间映射到\(p\text{-}t\)空间，得像函数\(U(p,t)\)：
+	\[
+	\begin{cases}
+		\frac{\partial^2 U(p,t)}{\partial t^2} + a^2 p^2 U(p,t) = 0 \\
+		U(p,0) = \int_{0}^{+\infty} \varphi(x) e^{-px} dx = \Phi(p) \\
+		\frac{\partial U(p,0)}{\partial t} = \int_{0}^{+\infty} \psi(x) e^{-px} dx = \Psi(p)
+	\end{cases}
+	\]
+	
+	
+	\subsubsection{求解结果}
+	
+	像函数解：
+	\[
+	U(p,t) = \frac{1}{2} \left[ e^{apt} \left( \Phi(p) + \frac{\Psi(p)}{ap} \right) + e^{-apt} \left( \Phi(p) - \frac{\Psi(p)}{ap} \right) \right]
+	\]
+	
+	原函数解：拉普拉斯逆变换映射回\(x\text{-}t\)空间，
+	\[
+	u(x,t) = \frac{1}{2\pi i} \int_{\sigma - i\infty}^{\sigma + i\infty} U(p,t) e^{px} dp
+	\]
+			
+						
+	\section{复数}
+	复数作为实数的拓展，实数的基础计算和大部分基本结论在复数上也适用或者可拓展，主要容易出错和不同点在于对数和根式运算的多值性。
+	\subsection{复数的表示方式}
+	复数共有三种常用表示形式，具体如下：
+	
+	\subsubsection{实部虚部表示}
+	复数的基本形式为 $z=a+bi$，其中：
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item $a$ 为实部，记作 $\operatorname{Re}(z)$；
+		\item $b$ 为虚部，记作 $\operatorname{Im}(z)$；
+		\item 实部 $a$ 和虚部 $b$ 均为实数，\textbf{虚部不含虚数单位 $i$}（易错点）。
+	\end{itemize}
+	该形式可与有序实数对 $(a,b)$ 一一对应，具有明确的几何意义（对应平面向量），由此可\textbf{引出复平面的定义}。
+	该形式在实际计算中较少直接采用。
+	
+	\subsubsection{欧拉公式表示法}
+	复数的指数形式为 $z=\rho e^{i\theta}$，其中：
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item $\rho$ 为复数的\textbf{模长}，记作 $|z|$；
+		\item $\theta$ 为复数的\textbf{幅角}，记作 $\operatorname{Arg}(z)$；
+		\item 取值范围在 $[0,2\pi)$ 内的幅角称为\textbf{主幅角}，记作 $\arg(z)$；
+		\item 一个复数仅有一个主幅角，但存在无数个幅角，这也是复数相关多值函数产生的原因；
+		\item \textbf{易错点}：实际运算中一定要注意对幅角的取值进行讨论。
+	\end{itemize}
+	该形式在处理多值函数、对数运算及三角运算时优势显著，是\textbf{运算中优先采用}的表示方式。
+	
+	\subsubsection{三角表示}
+	复数的三角形式为 $z=\rho(\cos\theta+i\sin\theta)$，其中：
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item $\theta$ 为幅角，与指数形式中的幅角一致；
+		\item $\rho$ 为复数的\textbf{模长}，记作 $|z|$。
+	\end{itemize}
+	该形式兼具明确的几何意义，便于进行复数的四则运算和处理旋转相关问题，在对应场景中被采用。
+	
+	\paragraph{重要推论}
+	结合复数的三角表示与欧拉公式 $e^{iz}=\cos z+i\sin z$，可推导出复变量三角函数的指数形式：
+	$$
+	\left\{
+	\begin{aligned}
+		\cos z&=\dfrac{e^{iz}+e^{-iz}}{2} \\
+		\\
+		\sin z&=\dfrac{e^{iz}-e^{-iz}}{2i}
+	\end{aligned}
+	\right.
+	$$
+	
+	
+	
+	\subsection{复数表示的应用与扩展运算}
+	\subsubsection{复变函数的表示和相关概念}
+	以复数 $z$ 作为输入的复变函数 $f(z)$，实际上相当于输入了 $z$ 的实部 $x$ 和虚部 $y$ 两个实数。复变函数也可按照实部虚部的表示方式，分解为实部和虚部两部分，即：
+	\[
+	f(z)=u(x,y)+iv(x,y)
+	\]
+	其中 $u$ 为函数的实部，$v$ 为函数的虚部。
+	
+	因此，复变函数的极限定义类似于二元函数的取值定义，需要满足从复平面上各个方向共同趋于同一个值，同时引入了\textbf{复平面上的区域 $D$} 这一概念。
+	
+	\subsubsection{复数的根式运算}
+	复数 $z$ 的 $n$ 次方根可表示为：
+	\[
+	\sqrt[n]{z}=\sqrt[n]{\rho}e^{i\frac{\theta}{n}}
+	\]
+	结合幅角的多值性 $\theta=\arg(z)+2k\pi$（$k=0,1,\dots,n-1$）进行讨论，可知 $\sqrt[n]{z}$ 存在 $n$ 个取值分支，这也说明\textbf{根式函数是一个多值函数}。
+	
+	\subsubsection{复数的对数运算}
+	复数的对数函数 $\ln z$ 可由 $z=\rho e^{i\theta}$ 推导得：
+	\[
+	\ln z=\ln(\rho e^{i\theta})=\ln\rho+i\operatorname{Arg}(z)
+	\]
+	由于 $\operatorname{Arg}(z)$ 具有无数个取值，因此对数函数 $\ln z$ 也存在\textbf{无数个取值分支}。
+	
+	
+	
+	\subsection{复变函数解析的判定条件}
+	\paragraph{复变函数的可微}
+	复变函数 $f(z)=u(x,y)+iv(x,y)$ 可微的充要条件是，实部 $u(x,y)$ 和虚部 $v(x,y)$ 这两个二元函数分别可微。
+	
+	\paragraph{复变函数的可导性}
+	复变函数在某一点处可导的充要条件为：
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item 函数在该点处 \textbf{有定义}；
+		\item 函数在该点处 \textbf{可微}；
+		\item 函数满足 \textbf{C-R 方程}（柯西-黎曼方程），即
+		\[
+		\begin{cases}
+			\dfrac{\partial u}{\partial x}=\dfrac{\partial v}{\partial y} \\
+			\\
+			\dfrac{\partial u}{\partial y}=-\dfrac{\partial v}{\partial x}
+		\end{cases}
+		\]
+	\end{enumerate}
+	注：$u$ 为复变函数的实部，$v$ 为复变函数的虚部。
+	
+	\paragraph{复变函数的解析性}
+	复变函数在某一区域 $D$ 内解析的含义是，复变函数在区域 $D$ 内处处可导。
+	
+	\subsection{复变函数的积分定理（柯西定理的推论与变形）}
+	复变函数的积分有以下几条定理，均为柯西定理的推论与变形：
+	
+	\paragraph{定理一: 路径无关定理}
+	如果函数在单连通区域 $D$ 内解析，则函数在该区域内任意两点间的积分与积分路径无关。
+	
+	\paragraph{推论}
+	函数在单连通区域内的闭合回路积分恒为 0，即
+	\[
+	\oint_{L}f(z)\mathrm{d}z = 0
+	\]
+	
+	\paragraph{定理二: 边界积分定理}
+	当函数在一个复连通区域 $D$ 内解析时，函数沿这一区域 $D$ 的所有 \textbf{正向边界} 的积分和为 0，即
+	\[
+	\sum_{k=1}^{n}\oint_{L_{k}}f(z)\mathrm{d}z = 0
+	\]
+	
+	\paragraph{定理三: 连续形变定理}
+	如果在区域 $D$ 内闭合曲线的形态变化不跨过区域边界（形象地描述是：变形过程不跨过“洞”），这种形变称为 \textbf{连续形变}；经连续形变的闭合回路，其积分值相等，即
+	\[
+	\oint_{L_1}f(z)\mathrm{d}z=\oint_{L_2}f(z)\mathrm{d}z
+	\]
+	
+	\subsection{奇点}
+	\paragraph{奇点的确定}
+	奇点的确定依赖于对函数式子的 \textbf{洛朗展开}，通用方法是对函数在目标点处进行洛朗展开，将其展开为幂函数形式的多项式。
+	
+	洛朗展开的常用方法：
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item \textbf{部分分式与配方法}：对于普通非超越式，可通过部分分式分解与配方，将其转化为某一点邻域内的幂函数形式。
+		\item \textbf{几何级数法}：几何级数 
+		\[
+		\frac{1}{1-x}=\sum_{n=0}^{\infty}x^n
+		\]
+		是重要的展开工具，可将函数在 $0$ 点邻域内展开，也可根据需求对其进行变形后使用。
+		\item \textbf{泰勒展开法}：通过对式子的某一部分进行泰勒展开，辅助完成函数在目标点邻域内的幂级数展开，进而辅助奇点的判定与分析。
+	\end{enumerate}
+	
+	\paragraph{奇点的分类}
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item \textbf{可去奇点}：函数在某一点 $z_0$ 邻域内的洛朗展开无负次幂项，$\lim_{z \to z_0}f(z)$ 为确定数值，该数值可通过洛朗展开求得。
+		\item \textbf{极点}：函数在某一点 $z_0$ 邻域内的洛朗展开有有限个负次幂项。
+		\item \textbf{本性奇点}：函数在某一点 $z_0$ 邻域内的洛朗展开有无穷多个负次幂项。
+		\item 极点和本性奇点处，$\lim_{z \to z_0}f(z)$ 无确定取值。
+		\item \textbf{特殊奇点——无穷远点}：可作为一类特殊的奇点进行分析，通过变量替换 $\omega=\frac{1}{z}$ 实现转化，$\omega\to0$ 对应 $z\to\infty$。
+	\end{itemize}
+	
+	\subsection{复变函数积分的计算}
+	\paragraph{利用留数定理进行计算}
+	积分的计算依赖于对路径的连续形变，对于闭合回路积分，连续形变通常有两种结果：
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item 转化为区域边界的计算问题，需用到 \textbf{边界积分定理}；
+		\item 转化为含奇点的闭合回路计算问题，此类计算是核心重点，需用到 \textbf{留数定理}。
+	\end{enumerate}
+	
+	\begin{itemize}[leftmargin=2em, itemsep=0.5em]
+		\item \textbf{留数的定义} \\
+		记 $\text{Res}[f(z),z_0]$ 为函数 $f(z)$ 在 $z=z_0$ 处的留数，其值为 $f(z)$ 在 $z_0$ 邻域内洛朗展开式中 \textbf{负一次幂项的系数}。 \\
+		无穷远点的留数：$\text{Res}[f(z),\infty]$ 为 $f(z)$ 在无穷远邻域内洛朗展开式中 \textbf{负一次幂项系数的负值}，可通过变量替换 $\omega=\frac{1}{z}$ 计算，此时 $f(z)=f\left(\frac{1}{\omega}\right)$，$\omega\to0$ 对应 $z\to\infty$。
+		
+		\item \textbf{留数定理公式} \\
+		设闭合路径 $L$ 所围区域内含有 $n$ 个奇点 $z_1,z_2,\dots,z_n$，则有
+		\[
+		\oint_{L}f(z)\mathrm{d}z=2\pi i\sum_{k=1}^{n}\text{Res}[f(z),z_k]
+		\]
+		
+		\item \textbf{留数的计算} \\
+		根据留数的定义，留数的计算主要依靠对函数在奇点邻域内进行 \textbf{洛朗展开}。 \\
+		显然，\textbf{可去奇点的留数等于 0}。 \\
+		特别地，若确认奇点 $z_0$ 为 \textbf{一阶极点}（洛朗展开式中仅含负一次幂项），则留数可通过公式计算：
+		\[
+		\text{Res}[f(z),z_0]=\lim_{z \to z_0}(z-z_0)f(z)
+		\]
+		若闭合回路内含有多个奇点且计算不便，对于 \textbf{全平面内除 $n$ 个极点外解析的函数}，依据奇点为特殊边界的性质，可得：
+		\[
+		\sum_{k=1}^{n}\text{Res}[f(z),z_k]=-\text{Res}[f(z),\infty]
+		\]
+	\end{itemize}
+	
+	\subsection{复变函数积分的运用}
+	\paragraph{1. 处理分式型沿实轴无穷积分}
+	\textbf{适用条件}：
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item $\psi(x)$ 和 $\phi(x)$ 均为关于 $x$ 的多项式；
+		\item $\psi(x)$ 在实轴上无零点；
+		\item $\psi(x)$ 的次数比 $\phi(x)$ 的次数高两次。
+	\end{itemize}
+	
+	\textbf{公式}：
+	\[
+	I=\int_{-\infty}^{+\infty}\frac{\varphi(x)}{\psi(x)}\mathrm{d}x=2\pi i\sum_{k=1}^{n}\text{Res}\left[\frac{\varphi(z)}{\psi(z)},b_k\right]
+	\]
+	其中 $b_k$ 为函数 $\frac{\phi(z)}{\psi(z)}$ 在上半平面内的所有奇点。
+	
+	\paragraph{2. 处理含三角函数的实无穷积分}
+	\textbf{适用引理（约当引理）}：
+	设 $C_R$ 是以原点为中心、半径为 $R$ 且位于上半平面的半圆周，函数 $f(z)$ 满足当 $z\to\infty$ 时，$f(z)$ 一致趋于 0，$m$ 为正数，则
+	\[
+	\lim_{R\to\infty}\oint_{C_R}f(z)e^{imz}\mathrm{d}z = 0
+	\]
+	
+	\textbf{推论公式}：
+	在符合约当引理适用条件，且 $f(x)$ 在实轴上无奇点的情况下，有
+	\[
+	\int_{-\infty}^{+\infty}f(x)e^{imx}\mathrm{d}x=2\pi i\sum_{k=1}^{n}\text{Res}\left[f(z)e^{imz},z_k\right]
+	\]
+	其中 $z_k$ 为函数 $f(z)e^{imz}$ 在上半平面内的所有奇点。
+	
+	\textbf{应用说明}：
+	可利用欧拉公式 $e^{imx}=\cos mx+i\sin mx$，分离实部与虚部，处理含 $\cos mx$、$\sin mx$ 的实无穷积分。
+	
+	\paragraph{3. 张角为 $\theta$ 的小圆弧上的积分（实轴含奇点的补充情形）}
+	\textbf{适用条件}：
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item $z_0$ 为 $f(z)$ 的 \textbf{一阶极点}；
+		\item $C_\delta$ 是以 $z_0$ 为圆心、以 $\delta$ 为半径、张角为 $\theta$ 的圆弧；
+		\item 积分路径取极限 $\delta\to0$。
+	\end{itemize}
+	
+	\textbf{公式}：
+	\[
+	\lim_{\delta\to0}\oint_{C_\delta}f(z)\mathrm{d}z=\theta\cdot i\cdot\text{Res}\left[f(z),z_0\right]
+	\]
+	
+	\textbf{应用说明}：
+	可结合前两类积分方法，补足 \textbf{实轴上存在奇点} 时的积分计算场景。
+	
+	
+	
+			
+\end{document}
