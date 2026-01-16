@@ -1,0 +1,461 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{fancyhdr}  % 页眉页脚设置
+\usepackage{lastpage}  % 获取总页数
+\usepackage{enumitem}  % 列表美化
+\usepackage{xcolor}    % 颜色支持
+
+% 页面设置
+\geometry{a4paper, margin=1.2in}  % 稍宽边距，提升可读性
+\linespread{1.1}  % 行间距调整
+
+% 页眉页脚配置
+\pagestyle{fancy}
+\fancyhf{}  % 清除默认设置
+\lhead{\small 热力学笔记}  % 左页眉
+\rhead{\small \thepage/\pageref{LastPage}}  % 右页眉：当前页/总页数
+
+\renewcommand{\headrulewidth}{0.4pt}  % 页眉线
+\renewcommand{\footrulewidth}{0.2pt}  % 页脚线
+
+% 列表样式调整
+\setlist[itemize]{leftmargin=2em, labelsep=0.5em}  % 项目符号列表缩进
+\setlist[enumerate]{leftmargin=2em, labelsep=0.5em}  % 编号列表缩进
+
+\title{\textbf{热力学笔记}}
+\author{}
+\date{}
+
+
+\begin{document}
+	
+		\maketitle
+	
+	% 目录（方便查阅）
+	\tableofcontents
+	\vspace{1cm}
+	\hrule  % 分隔线
+	\vspace{1cm}
+	
+	\pagebreak
+	
+	
+	\section{基本概念梳理}
+	\begin{enumerate}[label=\arabic*.]
+		\item \textbf{系统}
+		\begin{itemize}
+			\item 系统是指热力学研究中所选取的、划定的研究对象。
+			\item 根据系统的封闭性可以分为开放系统、封闭系统以及孤立系统。
+			\item 开放系统与外界有物质交换和能量交换。
+			\item 封闭系统没有物质交换，但有能量交换。特别的，绝热系统没有物质交换，没有热量交换，但可以有其他形式的能量交换。
+			\item 孤立系统没有物质交换，没有能量交换
+		\end{itemize}
+		一般热力学研究的是封闭系统和孤立系统。
+		
+		\item \textbf{外界}
+		\begin{itemize}
+			\item 外界环境指的是除所选取的系统外，所有其他对象的总和。
+		\end{itemize}
+		
+		\item \textbf{温标}
+		\begin{itemize}
+			\item 温标指的是衡量温度的单位，有摄氏温标、华氏温标以及国际标准的开式温标。
+			\item 开尔文与摄氏温标之间的换算为：\(T = 273 + t\)（\(T\)为开式温标，\(t\)为摄氏温标）
+		\end{itemize}
+		
+		\item \textbf{状态参量}
+		\begin{itemize}
+			\item 状态参量的定义是衡量系统所处的状态的参量，它们是与过程无关的，只与系统自身内部模型有关。
+			\item 热力学中常见的状态参量有温度\(T\)、压强\(P\)、体积\(V\)、内能\(U\)、熵\(S\)、焓\(H\)、吉布斯自由能\(G\)、亥姆霍兹自由能\(F\)、物质的量\(n\)。
+		\end{itemize}
+		
+		\item \textbf{状态方程}
+		
+			表示状态参量与其他状态参量的关系的方程称之为状态方程。
+		
+		\item \textbf{状态函数}
+		
+		特别的，形如\(A = L(X,Y,Z,\dots)\)这种形式的状态方程中，\(L(X,Y,Z,\dots)\)可以表示叫做\(A\)的状态函数。同一个状态参量可以选取不同其他参量作为变量构建多个等效的状态函数。
+
+		
+		\item \textbf{理想气体}
+		\begin{itemize}
+			\item 理想气体是分子动模型下的一种特殊情况，只考虑分子运动所具有的能量，不考虑分子之间的相互作用力。
+		\end{itemize}
+		
+		\item \textbf{阿伏伽德罗常数（\(N_A\)）}
+		\begin{itemize}
+			\item 阿伏伽德罗常数是表示一摩尔的物质中具有多少个组成这个物质的分子数，其数值约为\(6.022×10^{23}\ \text{mol}^{-1}\)。
+		\end{itemize}
+		
+		\item \textbf{玻尔兹曼常数（\(k\)）}
+		\begin{itemize}
+			\item 玻尔兹曼常数是热力学中的重要常数，其与理想气体常数、阿伏伽德罗常数的关系为\(k=\frac{R}{N_A}\)，数值约为\(1.381×10^{-23}\ \text{J/K}\)。
+		\end{itemize}
+		
+		\item \textbf{理想气体常数（\(R\)）}
+		\begin{itemize}
+			\item 对于理想气体，压强\(P\)与体积\(V\)成反比，与物质的量\(n\)和温度\(T\)成正比，即\(P\propto\frac{nT}{V}\)。
+			\item 经实验测定这个比例系数为理想气体常数\(R\)，在国际标准单位下\(R = 8.314\ \text{J·mol}^{-1}·\text{K}^{-1}\)。
+			\item 由此可推导出理想气体状态方程\(P=\frac{nRT}{V}\)
+		\end{itemize}
+		
+		\item \textbf{热平衡状态}
+		\begin{itemize}
+			\item 热平衡状态指的是两个能够进行热传递的物体之间互相传递的热量相等的状态。
+			\item 处于热平衡状态下的两个物体，温度相等。
+		\end{itemize}
+		
+		\item \textbf{自由度}
+		\begin{itemize}
+			\item 自由度指的是决定一个物体位置所需要的独立坐标数，叫做该物体的自由度。
+		\end{itemize}
+	\end{enumerate}
+	
+	
+	
+	
+	\section{分子动理论}
+
+	
+	\subsection{分子动理论基本概述}
+	
+	\subsubsection{分子动模型（核心假设）}
+	物质是由多个分子所构成的，这些分子在不断的进行无规则的运动，且分子间存在相互作用。
+	
+	\subsubsection{平均速率推论}
+	分子的平均速率相关公式：
+	\begin{align*}
+		&\text{最概然速率} \quad v_p=\sqrt{\frac{2kT}{m}}\\
+		&\text{平均速率} \quad \bar{v}=\sqrt{\frac{8kT}{\pi m}}\\
+		&\text{均方根速率} \quad \sqrt{\overline{v^2}}=\sqrt{\frac{3kT}{m}}
+	\end{align*}
+	
+	\subsubsection{能均分定理}
+	在热平衡状态下，物质分子的每一自由度都具有相同的平均动能，其大小为$\frac{1}{2}kT$。故有分子平均总动能$\bar{\varepsilon_k} = \frac{1}{2}(r + t + s)kT$
+	\\分子平均总能量$\bar{\varepsilon} = \frac{1}{2}(r + t + 2s)kT$
+	\\其中，平均平动动能为$\frac{1}{2}rkT$，平均转动动能为$\frac{1}{2}tkT$（$r$为平动自由度，$t$为转动自由度，$s$为振动自由度）
+	\\对于气体而言，平动自由度 $r$ 一般取$3$；一般情况下，单原子分子转动自由度 $t = 0$；线性分子转动自由度 $t = 2$；不规则结构分子转动自由度 $t = 3$
+	\\对于结构简单的分子而言，若构成分子的原子数为$N$，则存在关系：$s + t + r = 3N$
+	\\对于常温下的分子，振动自由度未被激发，$s = 0$
+	
+	\subsubsection{内能的理解}
+	在分子动模型下，系统内能即系统内部的能量，由分子运动所具有的动能和分子间相互作用所具有的势能组成。
+	\\特别的，对于理想气体而言，由于不考虑分子之间的相互作用，故内能完全等于分子动能的总和，即 $U = N\bar{\varepsilon}$，其中 $N$ 为系统内的分子数量。
+	
+	\section{热力学函数与热力学系数}
+	
+	\textbf{记忆要点:}
+	麦克斯韦关系不需要特别记忆，只需记住\textbf{勒让德变换}和\textbf{偏导数的性质}两条核心数学内容，以及\textbf{内能与三个共轭热力学态函数的对应关系}，即可自行推导。考试开始正式答题前，先把公式推出来写在草稿纸显眼处以便于后续使用。
+	% 第一部分 数学基础
+	\subsection{数学基础}
+	
+	\subsubsection{勒让德变换与共轭函数}
+	核心实质：勒让德变换的实质是\textbf{将函数的自变量转变为函数对原自变量的导数}，以此构造新的函数。
+	
+	具体内容：对于多变量函数 $f(x,y,z)$，其全微分表达式为：
+	\[
+	\mathrm{d}f=\frac{\partial f}{\partial x}\mathrm{d}x+\frac{\partial f}{\partial y}\mathrm{d}y+\frac{\partial f}{\partial z}\mathrm{d}z
+	\]
+	令 $X=\frac{\partial f}{\partial x}$，以 $X$ 作为新的自变量构造函数 $g(X,y,z)$，则有：
+	\[
+	\mathrm{d}g=-x\mathrm{d}X+\frac{\partial f}{\partial y}\mathrm{d}y+\frac{\partial f}{\partial z}\mathrm{d}z
+	\]
+	两个函数满足关系式：$g(X,y,z)=f(x,y,z)-X\cdot x$ \\
+	两个函数得微分满足关系式：$g(X,y,z)=f(x,y,z)-X\mathrm{d}x + x\mathrm{d}X$
+	
+	\subsubsection{二阶混合偏导数的性质}
+	若函数的全微分可表示为 $\mathrm{d}f = M(x,y)\mathrm{d}x+N(x,y)\mathrm{d}y$，可得 
+	$$\frac{\partial^2 f}{\partial x\partial y}=\frac{\partial }{\partial y}\left(\frac{\partial f}{\partial x}\right)=\frac{\partial M(x,y)}{\partial y}$$，
+	同理 $$\frac{\partial^2 f}{\partial y\partial x}=\frac{\partial }{\partial x}\left(\frac{\partial f}{\partial y}\right)=\frac{\partial N(x,y)}{\partial x}$$。
+	
+	二阶混合偏导数与求导顺序无关：对于二元函数 $f(x,y)$，满足
+	$
+	\frac{\partial^2 f}{\partial x\partial y}=\frac{\partial^2 f}{\partial y\partial x}
+	$
+	就有 $$\frac{\partial N}{\partial x}=\frac{\partial M}{\partial y}$$
+	
+	% 第二部分 推导前提
+	\subsection{推导前提}
+	
+	\subsubsection{内能变化的能量守恒关系}
+	由能量守恒可知，系统内能 $U$ 的变化来源于从外界吸收的热量、对外做的膨胀功，以及对外做的非膨胀功，其微分表达式为：
+	\[
+	\mathrm{d}U=\mathrm{d}Q-p\mathrm{d}V-\mathrm{d}W_\mathrm{n}
+	\]
+	式中 $p\mathrm{d}V$ 为对外做的膨胀功，$W_\mathrm{n}$ 为非膨胀功（non-expansion work）。
+	
+	\subsubsection{熵的定义与内能表达式变换}
+	定义状态参量\textbf{熵}（符号 $S$），其微分形式为：
+	\[
+	\mathrm{d}S=\frac{\mathrm{d}Q}{T}
+	\]
+	将熵的定义代入内能微分式，可得：
+	\[
+	\mathrm{d}U=T\mathrm{d}S-p\mathrm{d}V-\mathrm{d}W_\mathrm{n}
+	\]
+	
+	% 第三部分 热力学基本方程的建立
+	\subsection{热力学基本方程的建立}
+	
+	\subsubsection{气体体系的热力学基本方程}
+	当气体\textbf{只有膨胀功}且变化过程为\textbf{可逆变化}时，非膨胀功 $\mathrm{d}W_\mathrm{n}=0$，此时内能的微分表达式（即气体体系热力学基本方程）退化为：
+	\[
+	\mathrm{d}U=T\mathrm{d}S-p\mathrm{d}V
+	\]
+	内能 $U$ 是以 $S、V$ 为自变量的状态函数，对其做勒让德变换可得到三组共轭热力学函数，对应微分形式与函数如下：
+	\begin{itemize}[leftmargin=2em]
+		\item 微分形式 $\mathrm{d}F=-S\mathrm{d}T-p\mathrm{d}V$，对应 \textbf{亥姆霍兹自由能} $F$
+		\item 微分形式 $\mathrm{d}H=T\mathrm{d}S+V\mathrm{d}p$，对应 \textbf{焓} $H$
+		\item 微分形式 $\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}p$，对应 \textbf{吉布斯自由能} $G$
+	\end{itemize}
+	
+	\subsubsection{磁介质体系的热力学基本方程}
+	根据能量守恒定律，磁介质的内能变化由吸收的热量、对外做的磁力功以及其他形式的功决定。
+	
+	当磁介质\textbf{只做磁力功}时，内能的微分表达式（即磁介质体系热力学基本方程）为：
+	\[
+	\mathrm{d}U=T\mathrm{d}S-\mu_0H\mathrm{d}m
+	\]
+	式中 $\mu_0$ 为磁导率，$H$ 为磁场强度，$m$ 为磁矩。
+	
+	在常数没有影响的不涉及数值的证明中，可以将上式的符号简写为：
+	\[
+	\mathrm{d}U=T\mathrm{d}S + H\mathrm{d}m
+	\]
+	
+	这里，$H$ 不为磁场强度，可以认为是磁场的状态函数
+	% 第四部分 麦克斯韦关系的推导
+	\subsection{麦克斯韦关系的推导}
+	
+	\subsubsection{推导依据}
+	根据第一部分提到的\textbf{二阶混合偏导数与求导顺序无关}的性质，结合气体体系的四个热力学态函数的微分方程，可推导出四组麦克斯韦关系。
+	
+	\subsubsection{气体体系的四组麦克斯韦关系}
+	由 $\mathrm{d}U=T\mathrm{d}S-p\mathrm{d}V$，可得 $\left(\frac{\partial T}{\partial V}\right)_S=-\left(\frac{\partial p}{\partial S}\right)_V$
+	
+	由 $\mathrm{d}H=T\mathrm{d}S+V\mathrm{d}p$，可得 $\left(\frac{\partial T}{\partial p}\right)_S=\left(\frac{\partial V}{\partial S}\right)_p$
+	
+	由 $\mathrm{d}F=-S\mathrm{d}T-p\mathrm{d}V$，可得 $\left(\frac{\partial S}{\partial V}\right)_T=\left(\frac{\partial p}{\partial T}\right)_V$
+	
+	由 $\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}p$，可得 $\left(\frac{\partial S}{\partial p}\right)_T=-\left(\frac{\partial V}{\partial T}\right)_p$
+	
+	补充说明：麦克斯韦关系的适用范围比推出它的四个热力学基本方程更广，在有非膨胀功做功的前提下仍然成立。
+	
+
+	
+
+	
+	\subsection{热容量}
+	
+	\subsubsection{热容量的定义}
+	热容量（或称比热容）$C$，是衡量物体吸收热量时，因容纳热量所引起温度变化程度的物理量。
+	定义式为：
+	\[
+	C=\frac{\mathrm{d}Q}{\mathrm{d}T}
+	\]
+	
+	\subsubsection{热容量与熵的关系}
+	热容量与熵的定义式形式相似但物理意义不同：
+	\begin{align*}
+		\mathrm{d}S&=\frac{\mathrm{d}Q}{T} \\
+		C&=\frac{\mathrm{d}Q}{\mathrm{d}T}
+	\end{align*}
+	通过微分热量 $\mathrm{d}Q$ 建立关联，联立两式推导可得：
+	\[
+	\mathrm{d}Q=TdS=C\mathrm{d}T
+	\]
+	
+	故有：
+	\[
+	C = \frac{\mathrm{d} S}{\mathrm{d} T} T
+	\]
+	\subsubsection{特定条件下的热容量}
+	不同约束条件对应不同的热容量，常用的有定容热容量 $C_V$ 与定压热容量 $C_p$。
+	\begin{itemize}[leftmargin=2em, itemsep=0.8em]
+		\item \textbf{定容热容量（$C_V$）} \\
+		定义：体积保持不变时的热容量。 \\
+		推导依据：热力学第一定律 $\mathrm{d}Q=\mathrm{d}U+p\mathrm{d}V$，定容条件下 $\mathrm{d}V=0$，因此 $\mathrm{d}Q=\mathrm{d}U$。 \\
+		表达式：
+		\[
+		C_V=\left(\frac{\partial U}{\partial T}\right)_V
+		\]
+		
+		\item \textbf{定压热容量（$C_p$）} \\
+		定义：压强保持不变时的热容量。 \\
+		推导依据：焓的微分表达式 $\mathrm{d}H=\mathrm{d}U+p\mathrm{d}V+V\mathrm{d}p=\mathrm{d}Q+V\mathrm{d}p$，定压条件下 $\mathrm{d}p=0$，因此 $\mathrm{d}H=\mathrm{d}Q$。 \\
+		表达式：
+		\[
+		C_p=\left(\frac{\partial H}{\partial T}\right)_p
+		\]
+		
+		
+	\end{itemize}
+	
+	\subsubsection{定容热容量与定压热容量的关系}
+	\begin{itemize}[leftmargin=2em, itemsep=0.8em]
+		\item 由焓的微分变形式$dH = dU + pdV $推导：
+		\[
+		\mathrm{d}H=\left(\frac{\partial U}{\partial T}\right)_V\mathrm{d}T+\left[\left(\frac{\partial U}{\partial V}\right)_T + p\right]\mathrm{d}V = C_V\mathrm{d}T+\left[\left(\frac{\partial U}{\partial V}\right)_T + p\right]\mathrm{d}V
+		\]
+		
+		\item 定压条件下对温度 $T$ 求偏导，结合 $C_p$ 的定义 $\displaystyle C_p=\left(\frac{\partial H}{\partial T}\right)_p$，可得：
+		\[
+		C_p=C_V+\left[\left(\frac{\partial U}{\partial V}\right)_T + p\right]\left(\frac{\partial V}{\partial T}\right)_p
+		\]
+		
+		\item 理想气体的特殊关系（迈耶公式）：
+		对于理想气体，可推导得到简化公式：
+		\[
+		C_p = C_V + nR
+		\]
+		式中 $n$ 为理想气体的物质的量，$R$ 为理想气体常量。
+	\end{itemize}
+	
+	
+	\subsection{热力学系数}
+	\begin{itemize}[leftmargin=2em]
+		\item 定压膨胀系数 $\alpha$：压强 $p$ 不变时，体积随温度的相对变化率，表达式为
+		\[
+		\alpha=\frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_p
+		\]
+		\item 定容压强系数 $\beta$：体积 $V$ 不变时，压强随温度的相对变化率，表达式为
+		\[
+		\beta=\frac{1}{p}\left(\frac{\partial p}{\partial T}\right)_V
+		\]
+		\item 等温压缩系数 $\kappa$：温度 $T$ 不变时，体积随压强的相对变化率（负号保证系数为正），表达式为
+		\[
+		\kappa=-\frac{1}{V}\left(\frac{\partial V}{\partial p}\right)_T
+		\]
+		\item \textbf{绝热系数 $\gamma$}：定义为定压热容量与定容热容量的比值，表达式为
+		\[
+		\gamma=\frac{C_p}{C_V}
+		\]
+	\end{itemize}
+	
+	
+	
+	
+	
+	% 第三章 热机
+	\section{热机}
+	
+	\subsection{热机的定义}
+	\paragraph{狭义热机}：利用介质的热力学状态变化来对外做\textbf{机械功}的机械。
+	\paragraph{制冷机}（也可称为冷机或热泵）：通过外界输入机械功来改变介质热力学状态的机械。
+	\paragraph{广义热机}：基于机械功与介质热力学状态变化的相互转化原理制成的机械，涵盖狭义热机与制冷机。
+	
+	\textbf{说明}：以下我们讨论的热机，均以气体作为工作介质。
+	
+	% 第一部分 前置知识
+	\subsection{前置知识}
+	
+	\subsubsection{流体压强的性质}
+	
+	液体静压强公式：在地球重力场中，静止的液体内部压强与深度有关，同一深度下各个方向的压强相等，且满足公式
+	\[
+	p=\rho gh + p_0
+	\]
+	其中$p_0$是大气压强或者说液面的气体压强。
+	
+	可以推导出液体静相对高度压强公式：
+	\[
+	\Delta p=\rho g \Delta h
+	\]
+	气体及零重力环境下流体的压强特点：对于气体和零重力环境下的流体，其内部压强处处相等。
+	
+	但是在重力场下的气体高度差住够大也可以用液体静相对高度压强公式。
+
+	\subsubsection{气体的变化过程类型}
+	除初中所学的等容、等压、等温过程外，气体热力学过程还包括以下两种：
+	\begin{itemize}[leftmargin=2em]
+		\item 绝热过程：气体变化过程中，与外界没有热量交换，过程方程为 $pV^\gamma = C$（$C$ 为常数，$\gamma$ 为绝热系数）
+		\item 多方过程：存在多个因素作用下的气体变化过程，过程方程为 $pV^z = C$（$C$ 为常数，$z$ 为任意常数）
+	\end{itemize}
+	
+	\subsubsection{机械效率}
+	机械效率是有效功与总功的比值，用符号 $\eta$ 表示，表达式为
+	\[
+	\eta=\frac{W_{useful}}{W_{total}}
+	\]
+	
+
+	
+	
+	
+	
+	% 第二部分 热机的种类和判定
+	\subsection{热机的种类和判定}
+	以下讨论的热机为\textbf{理想状态下工作的热机}，其介质为理想气体，工作过程为准静态过程。
+	
+	
+	\subsubsection{卡诺循环热机}
+	循环组成：由两个等温过程和两个绝热过程构成。
+	
+	热机效率：
+	\[
+	\eta_{\mathrm{热}} = 1-\frac{T_2}{T_1}
+	\]
+	冷机（制冷机）效率（制冷系数）：
+	\[
+	\eta_{\mathrm{冷}} = \frac{T_2}{T_1-T_2}
+	\]
+	式中 $T_1$ 为高温热源温度，$T_2$ 为低温热源温度。
+	
+	\subsubsection{奥托循环热机}
+	循环组成：由两个定容过程和两个绝热过程构成。
+	
+	\subsubsection{狄塞尔循环热机}
+	循环组成：由一个等压过程、一个等容过程以及两个绝热过程构成。
+	
+	\subsubsection{核心结论}：所有热机做功循环中，做功过程均为绝热过程。
+	
+	
+	
+	
+	
+	% 第三部分 热机工作原理
+	\subsection{热机工作原理}
+	
+	\subsubsection{热力学第一定律}
+	\begin{itemize}[leftmargin=2em]
+		\item 表达式及符号定义：$U = Q - W$，其中 $Q$ 为系统接受的热量，$W$ 为系统对外做功，$U$ 为系统的内能。
+		\item 实质：是物理学中能量守恒定律在热力学中的具体表现形式。
+		\item 气体的膨胀功：气体在热力学过程中一般对外做膨胀功，膨胀功的计算公式为
+		\[
+		W_p=\int_{V_1}^{V_2}p\mathrm{d}V
+		\]
+	\end{itemize}
+	
+	记忆提示：是V作积分是因为做功可以压强不变。
+	
+	\subsubsection{热力学第二定律}
+	\begin{itemize}[leftmargin=2em]
+		\item 数学表达式：
+		\[
+		S_b - S_a \ge \int_{a}^{b}\frac{\mathrm{d}Q}{T}
+		\]
+		\item 记忆方法：熵 $S$ 是系统的状态参量，其变化量仅由系统的初末状态 $a、b$ 决定，与过程无关；热量 $Q$ 是过程参量，其数值与热力学过程的路径紧密相关。该式的关系可类比为“从A点到B点的运动过程”，熵差 $S_b-S_a$ 相当于两点之间的“直线距离对应的平均速率”，而热温比积分 $\int_{a}^{b}\frac{\mathrm{d}Q}{T}$ 相当于“沿弯曲道路运动的平均速度”，实际过程中前者总是大于或等于后者，对应不可逆过程熵增、可逆过程熵不变的规律。
+		\item 熵函数（\textbf{理想气体适用}）
+		\begin{itemize}[leftmargin=2em]
+			\item 基本属性：熵函数是一个状态函数。
+			\item 基本表示式1：
+			\[
+			S(T,V)=\int C_V\frac{\mathrm{d}T}{T}+nR\ln V+S_0
+			\]
+			\item 基本表示式2：
+			\[
+			S(p,V)=\int C_V\frac{\mathrm{d}p}{p}+\int C_p\frac{\mathrm{d}V}{V}+S_0
+			\]
+			\item 基本表示式3：
+			\[
+			S(T,p)=\int C_p\frac{\mathrm{d}T}{T}-nR\ln p+S_0
+			\]
+		\end{itemize}
+	\end{itemize}
+	
+	
+\end{document}

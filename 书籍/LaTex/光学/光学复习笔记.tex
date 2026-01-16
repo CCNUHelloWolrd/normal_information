@@ -1,0 +1,729 @@
+\documentclass{article}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{fancyhdr}  % 页眉页脚设置
+\usepackage{lastpage}  % 获取总页数
+\usepackage{enumitem}  % 列表美化
+\usepackage{xcolor}    % 颜色支持
+
+% 页面设置
+\geometry{a4paper, margin=1.2in}  % 稍宽边距，提升可读性
+\linespread{1.1}  % 行间距调整
+
+% 页眉页脚配置
+\pagestyle{fancy}
+\fancyhf{}  % 清除默认设置
+\lhead{\small 光学笔记}  % 左页眉
+\rhead{\small \thepage/\pageref{LastPage}}  % 右页眉：当前页/总页数
+
+\renewcommand{\headrulewidth}{0.4pt}  % 页眉线
+\renewcommand{\footrulewidth}{0.2pt}  % 页脚线
+
+% 列表样式调整
+\setlist[itemize]{leftmargin=2em, labelsep=0.5em}  % 项目符号列表缩进
+\setlist[enumerate]{leftmargin=2em, labelsep=0.5em}  % 编号列表缩进
+
+\title{\textbf{光学笔记}}
+\author{}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	% 目录（方便查阅）
+	\tableofcontents
+	\vspace{1cm}
+	\hrule  % 分隔线
+	\vspace{1cm}
+	
+	\pagebreak
+	
+	\section{偏振光}
+	\subsection{基本概念梳理}
+	\paragraph{光（波动性定义）}
+	由电矢量振动产生的横波。
+	
+	\paragraph{光的振幅 \(A\)}
+	振动的电矢量的模所能取到的最大值，即模最大的电矢量的大小。
+	
+	\paragraph{偏振态 \(\vec{E}\)}
+	用偏振态向量 \(\vec{E}\) 表示光的偏振状态，包含光的振幅和振动方向；\(\vec{E}\) 的模等于 \(A\)，\(\vec{E}\) 是电矢量取到模最大时的电矢量。
+	
+	\paragraph{光强 \(I\)}
+	衡量光的强弱的物理量，与振幅的平方成正比；相对光强满足公式 \(I = A^2\)。
+	
+	\paragraph{线偏振光}
+	只有单个偏振方向的光波所组成的光。
+	
+	\paragraph{椭圆偏振光}
+	由两个频率相同、振动方向正交、相位差恒定的线偏振光叠加而成的偏振光，其电矢量的端点在垂直于光传播方向的平面内描绘出椭圆轨迹。
+	
+	\paragraph{圆偏振光}
+	椭圆偏振光的特例，由两个频率相同、振动方向正交、相位差为 \(\pm\frac{\pi}{2}\) 且振幅相等的线偏振光叠加而成，其电矢量的端点在垂直于光传播方向的平面内描绘出圆形轨迹。
+	
+	\begin{itemize}[leftmargin=2em]
+		\item 当相位差为\(-\frac{\pi}{2}\)时，为左旋圆偏振光。 
+		
+		\item 当相位差为\(\frac{\pi}{2}\)时，为右旋圆偏振光。
+	
+	\end{itemize}
+	
+	
+	\paragraph{自然光}
+	由大量无固定相位关系、振动方向均匀分布在垂直于光传播方向平面内的线偏振光叠加而成的非偏振光，各个方向的偏振分量振幅相等。
+	
+	\paragraph{光轴}
+	研究时所选取的具有特定光学性质的特殊方向。
+	
+	\paragraph{主平面}包含\textbf{晶体光轴}和\textbf{某条给定光线}的平面。
+	
+	\paragraph{主截面}包含\textbf{晶体光轴}和\textbf{介质界面法线}的平面。光轴在入射面时，主截面与主平面重合。
+
+	\paragraph{单轴晶体}
+	在偏振研究中只有一条光轴的晶体，例如方解石。
+	
+	\paragraph{起振器}
+	使入射的非线偏振光转化为或分离出线偏振光的光学仪器。
+	
+	\paragraph{检偏器}
+	将线偏振光入射后，能够改变线偏振光偏振方向的光学仪器。
+	
+	\paragraph{偏振角 \(\theta\)}
+	偏振态的方向与检偏器允许通过的偏振方向的夹角。
+	
+	\paragraph{晶体的双折射}
+	当一束椭圆偏振光入射晶体时，会在晶体内分为两束光并各自发生折射的现象。
+	
+	\paragraph{寻常光（o 光，ordinary light）}
+	双折射现象中，折射规律符合折射定律 \(n_1\sin i_1 = n_2\sin i_2\) 的光。振动方向垂直光轴。
+	
+	\paragraph{非寻常光（e 光，extraordinary light）}
+	双折射现象中，折射规律不遵循折射定律的光。振动方向平行光轴.
+	
+	\paragraph{波片}
+	使寻常光（o 光）和非寻常光（e 光）产生特定相位差 \(\Delta\varphi\) 的光学仪器，通常根据 \(\Delta\varphi\) 的大小区分种类。例如 1/4 波片，可使 o 光和 e 光产生的相位差 \(\Delta\varphi=\frac{2\pi}{4}=\frac{\pi}{2}\)。
+	
+	\paragraph{\(s\) 光}
+	电矢量方向垂直于入射面的光，名称源于英文“senkrecht”（意为“垂直的”）。
+	
+	\paragraph{\(p\) 光}
+	电矢量方向平行于入射面的光，名称源于英文“parallel”（意为“平行的”）。
+	
+	\subsection{偏振光的相关公式与规律}
+	\subsubsection{偏振光的分解等效}
+	在实际研究过程中，常将一束光的电矢量沿\textbf{平行于入射面}、\textbf{垂直于入射面}、\textbf{光的传播方向}三个相互正交的方向进行分解，以便于研究和计算。
+	
+	规定如下物理量与方向向量：
+	\begin{itemize}[leftmargin=2em]
+		\item 平行于入射面的方向向量为 $\vec{i}$；
+		\item 垂直于入射面的方向向量为 $\vec{j}$；
+		\item 光的传播方向为 $z$ 轴；
+		\item 波数 $k=\frac{2\pi}{\lambda}$（$\lambda$ 为光的波长）。
+	\end{itemize}
+	
+	对于任意的稳定相位偏振光，利用这种偏振态的矢量分解与合成法则，可以将其等效为两个正交方向上的线偏振光的叠加。
+	
+	正交方向上的偏振光矢量表达式分别为：
+
+	
+	\[
+	\begin{cases}
+		\vec{E}_x = A\cos\theta\sin(\omega t - kz)\cdot\vec{i}\\
+	
+		\vec{E}_y = A\sin\theta\sin(\omega t - kz+\Delta\varphi)\cdot\vec{j}
+	\end{cases}
+	\]
+	
+	
+	
+	特别的，相位差$\Delta\varphi$决定偏振态：
+	\begin{itemize}[leftmargin=2em]
+		\item $\Delta\varphi=0 \text{或} \pi $ 表示线偏振光；
+		\item $0<\Delta\varphi < \pi$ 表示右旋光；
+		\item $\pi < \Delta\varphi<2\pi$ 表示左旋光。
+	\end{itemize}
+	
+	\textbf{注意：}式子是等效后的数学模型，不一定实质上是旋光或线偏振光。
+	
+	\subsubsection{偏振度 \(P\)}
+	公式：
+	\[
+	P = \frac{I_A - I_B}{I_A + I_B}
+	\]
+	物理实质：用于衡量光的偏振程度，针对椭圆偏振光或可等效为椭圆偏振光的光，其数值由椭圆的长轴与短轴对应的光强构成的比值差决定。
+	
+	\subsubsection{马吕斯定律}
+	振幅分解公式：
+	\[
+	A_\theta = A\cos\theta
+	\]
+	光强公式：
+	\[
+	I_\theta = I\cos^2\theta
+	\]
+	物理实质：线偏振光在检偏器允许通过方向上的分解投影，其中 \(\theta\) 为偏振角。
+	
+	\subsubsection{	布儒斯特定律}
+
+	当自然光入射到各向同性的均匀介质分界面时，若反射光与折射光相互垂直，则反射光为完全线偏振的s光，此时对应的入射角称为布儒斯特角（又称起偏角）。
+	
+	$$\tan i_B = \frac{n_2}{n_1}$$
+	式中 $n_1$ 为入射介质的折射率，$n_2$ 为折射介质的折射率，$i_B$ 为布儒斯特角。
+	
+	注意与全反射临界角$\sin i_C = \frac{n_1}{n_2}$区分。
+	
+	\subsubsection{菲涅尔公式}
+	公式表达式：
+	\[
+	\begin{cases}
+		\dfrac{A_{s1}'}{A_{s1}} = \dfrac{\sin(i_2 - i_1)}{\sin(i_1 + i_2)} = -\dfrac{\sin(i_1 - i_2)}{\sin(i_1 + i_2)} \\
+		\\
+		\dfrac{A_{p1}'}{A_{p1}} = \dfrac{\tan(i_1 - i_2)}{\tan(i_1 + i_2)} \\
+		\\
+		\dfrac{A_{s2}}{A_{s1}} = \dfrac{2\sin i_2\cos i_1}{\sin(i_1 + i_2)} \\
+		\\
+		\dfrac{A_{p2}}{A_{p1}} = \dfrac{2\sin i_2\cos i_1}{\sin(i_1 + i_2)\cos(i_1 - i_2)}
+	\end{cases}
+	\]
+	符号解释和批注：
+	\(A_{s1}\)、\(A_{p1}\) 分别为入射光 \(s\) 分量（垂直入射面）、\(p\) 分量（平行入射面）的振幅；
+	\(A_{s1}'\)、\(A_{p1}'\) 分别为反射光 \(s\) 分量、\(p\) 分量的振幅；
+	\(A_{s2}\)、\(A_{p2}\) 分别为折射光 \(s\) 分量、\(p\) 分量的振幅；
+	\(i_1\) 为入射角，\(i_2\) 为折射角。
+		
+	\subsubsection{波片出射光的偏振态公式}
+	设入射的线偏振光振幅为\(A\)，与波片光轴夹角为\(\theta\)，角频率相关相位为\(\varphi\)，波片使o光和e光产生的相位差为\(\Delta\varphi\)。规定光轴方向为\(\vec{i}\)方向（e光振动方向）、垂直光轴方向为\(\vec{j}\)方向（o光振动方向）。
+	
+	\paragraph{基础o光、e光偏振态向量}
+	e光振动方向平行光轴，仅含\(\vec{i}\)分量且无相位偏移；o光振动方向垂直光轴，仅含\(\vec{j}\)分量且承载相位差\(\Delta\varphi\)，公式为：
+	\[
+	\vec{E}_e = A\cos\theta\sin\varphi \cdot\vec{i}
+	\]
+	\[
+	\vec{E}_o = A\sin\theta\sin(\varphi+\Delta\varphi) \cdot\vec{j}
+	\]
+	出射总偏振态向量为两束光向量叠加：
+	\[
+	\vec{E}' = \vec{E}_e+\vec{E}_o = A\cos\theta\sin\varphi \cdot\vec{i} + A\sin\theta\sin(\varphi+\Delta\varphi) \cdot\vec{j}
+	\]
+	
+	\paragraph{1/4波片（\(\Delta\varphi=\frac{\pi}{2}\)）}
+	\[
+	\vec{E}' = A\cos\theta\sin\varphi \cdot\vec{i} + A\sin\theta\cos\varphi \cdot\vec{j}
+	\]
+	
+	\paragraph{半波片（\(\Delta\varphi=\pi\)）}
+	\[
+	\vec{E}' = A\cos\theta\sin\varphi \cdot\vec{i} - A\sin\theta\sin\varphi \cdot\vec{j}
+	\]
+
+	
+	\begin{itemize}[leftmargin=2em]
+		\item \textbf{二倍角旋转性}
+		
+		旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转旋性会反转出射光仍为线偏振光，偏振方向相对入射光旋转\(2\theta\)，这一性质可以记作半波片的二倍角旋转性。
+		
+		\item \textbf{反旋性} 
+		
+			当圆偏振光射入半波片时，旋性会反转
+		
+	\end{itemize}
+	
+	\paragraph{全波片（\(\Delta\varphi=2\pi\)）}
+	\[
+	\vec{E}' = A\cos\theta\sin\varphi \cdot\vec{i} + A\sin\theta\sin\varphi \cdot\vec{j}
+	\]
+	出射光偏振态与入射光完全一致，无偏振转换作用。
+	
+	% 光的干涉（主章节）
+	\section{光的干涉}
+	
+	% 前置知识
+	\subsection{前置知识}
+	\subsubsection{半波损失}
+	半波损失是指光线\textbf{正射或掠射}时，从\textbf{光疏介质入射到光密介质}的界面上发生反射，反射光会产生半个波长的附加光程差的现象。
+	
+	特别地，当存在三层介质，折射率分别为 $n_1$（上层）、$n_2$（中层）、$n_3$（下层）时，若 $n_1<n_2>n_3$ 或 $n_3>n_2<n_1$，两个界面的两束反射光之间会相差半个周期的光程差。
+	
+	% 一、光的干涉的定义
+	\subsection{光的干涉的定义}
+	由于波的叠加而产生稳定的周期性变化的现象，称之为\textbf{干涉}。
+	
+	% 二、光的干涉的形成条件
+	\subsection{光的干涉的形成条件}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item 两束光的\textbf{频率相等}；
+		\item 两束光在观测时间内\textbf{振动不中断}；
+		\item 两束光在相遇处的\textbf{振动方向几乎沿同一直线}。
+	\end{enumerate}
+	
+	\textbf{条件总结}：同频、连续、共线。
+	
+	\textbf{相干光源定义}：如果一对光源满足上述干涉形成条件，就称之为\textbf{相干光源}。
+	
+	% 三、常见干涉现象与实验
+	\subsection{常见干涉现象与实验}
+	\subsubsection{薄膜干涉}
+	\[
+	\delta = 2d\sqrt{n_1^2-n_2^2\sin^2i_1} - \frac{\lambda}{2}=\begin{cases}
+		2j\cdot\dfrac{\lambda}{2} \quad &\text{明条纹} \quad (j=0,1,2,\dots) \\
+		\\
+		(2j+1)\cdot\dfrac{\lambda}{2} \quad &\text{暗条纹} \quad (j=0,1,2,\dots)
+	\end{cases}
+	\]
+	式中：$d$ 为薄膜厚度；$i_1$ 为入射倾角；$-\frac{\lambda}{2}$ 为半波损失，根据情况取舍。
+	
+	\textbf{干涉条纹类型}
+	\begin{itemize}[leftmargin=2em]
+		\item 因入射倾角 $i_1$ 改变而产生不同干涉条纹的，称为\textbf{等倾干涉}；
+		\item 因薄膜厚度 $d$ 改变而产生不同干涉条纹的，称为\textbf{等厚干涉}。
+	\end{itemize}
+	
+	\subsubsection{法布里-珀罗干涉仪}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item \textbf{第$n$条出射光的振幅}
+		设反射率为$\rho$，入射光振幅为$A_0$，则第$n$条出射光的振幅为
+		\[
+		A_n = \rho^{n-1} \cdot (1-\rho) \cdot A_0
+		\]
+		
+		\item \textbf{合振幅光强公式}
+		多束出射光叠加后的合振幅光强满足
+		\[
+		A^2=\frac{A_0^2}{1+F\cdot\sin^2\frac{\varphi}{2}}
+		\]
+		式中参数定义：
+		\begin{itemize}[leftmargin=2em]
+			\item 精细度 $F=\dfrac{4\rho}{(1-\rho^2)}$
+			\\
+			\item 相位差 $\varphi=\dfrac{4\pi}{\lambda}  n_2 d_0 \cos i_2$
+		\end{itemize}
+		
+		\item \textbf{特殊情形（高反射率近似）}
+		当反射率$\rho$很大时，光强公式可近似为等振幅多光束干涉公式：
+		\[
+		A^2 = A_0^2 \cdot \frac{\sin^2\frac{N\varphi}{2}}{\sin^2\frac{\varphi}{2}}
+		\]
+	\end{enumerate}
+	
+	\subsubsection{牛顿环}
+	\textbf{亮环半径公式}
+	平凸透镜曲率半径为 $R$，第 $j$ 级亮环的半径 $r$ 满足公式：
+	\[
+	\frac{r^2}{R}=j\lambda \quad (j=0,1,2,3,\dots)
+	\]
+	式中 $r$ 为亮环半径，$R$ 为平凸透镜的曲率半径，$j$ 为干涉级次，$\lambda$ 为入射光的波长。
+	
+	\subsubsection{双缝干涉与杨氏双缝实验}
+	\textbf{光程差与条纹条件公式}
+	双缝干涉中，条纹到中心亮条纹的距离 $x$ 对应的光程差 $\delta$ 满足：
+	\[
+	\delta = \frac{dx}{r_0}=
+	\begin{cases}
+		k\lambda \quad &\text{明纹} \\
+		\left(k+\frac{1}{2}\right)\lambda \quad &\text{暗纹}
+	\end{cases}
+	\quad (k=0,\pm1,\pm2,\dots)
+	\]
+	式中 $d$ 为双缝间距，$r_0$ 为双缝到光屏的距离，$\lambda$ 为入射光波长，$x$ 为条纹到中心亮条纹的距离。
+	
+	\subsubsection{劳埃德镜实验}
+	劳埃德镜实验可以等效成杨氏双缝实验模型，需考虑\textbf{半波损失}的影响，其光程差与条纹条件公式为：
+	\[
+	\delta = \frac{dx}{r_0} - \frac{\lambda}{2}=
+	\begin{cases}
+		k\lambda \quad &\text{明纹} \\
+		\left(k+\frac{1}{2}\right)\lambda \quad &\text{暗纹}
+	\end{cases}
+	\quad (k=0,\pm1,\pm2,\dots)
+	\]
+	
+	\subsubsection{菲涅尔双面镜实验}
+	菲涅尔双面镜实验是利用两个夹角极小的平面镜，将同一光源发出的光分为两束相干光，从而产生干涉现象的实验。
+	
+	\textbf{条纹间距公式}
+	干涉条纹的间距 $\Delta y$ 满足：
+	\[
+	\Delta y=\frac{(r+l)\lambda}{2r\sin\theta}
+	\]
+	式中 $\theta$ 为两个镜面的夹角，$l$ 为镜面交线到光屏的距离，$r$ 为镜面交线与光源的距离，$\lambda$ 为入射光的波长。
+	
+	\textbf{特殊情形（平行光入射）}
+	当平行光入射时，$r\to\infty$，条纹间距公式可简化为：
+	\[
+	\Delta y=\frac{\lambda}{2\sin\theta}
+	\]
+	
+	\subsubsection{单轴晶体的光率体模型}
+	
+	对于单轴晶体，常采用光率体模型进行描述。单轴晶体的光率体为假想的均匀介质球体变换得到的椭球体，其旋转面由两条几何主轴构成，轴长之比等于o光折射率 $n_o$ 与e光折射率 $n_e$ 之比；旋转轴即为晶体的光轴，同时也是e光对应的主轴方向。而原来的均匀介质球体直径为o光折射率。e光的实际折射是在均匀球体中以o光方式传播后随球体一同变换至椭球体。
+	
+	光轴方向的轴长与 $n_o$、$n_e$ 的相对大小直接关联：
+	\begin{itemize}[leftmargin=2em]
+		\item 正单轴晶体：$n_e > n_o$，光轴方向为椭球的长轴；
+		\item 负单轴晶体：$n_e < n_o$，光轴方向为椭球的短轴。
+	\end{itemize}
+	
+	利用该椭球模型，可根据入射光方向判断其偏振态与传播特性，并通过几何作图法直观分析晶体相关的光学问题。
+	
+	\section{ 光的衍射}
+	
+	\subsection{基本概念梳理}
+	
+	\subsubsection{核心基础概念}
+	\begin{enumerate}[label=\arabic*.]
+		\item \textbf{考察点}：在光学研究中，于光所传播的范围内的空间某一位置，由人为选定的用于分析该处光的特性的点（在波动光学的角度研究光学问题的时候，通常第一步首先需要选取所需要研究的考察点）。
+		\item \textbf{光的衍射}：光在传播中不沿直线传播而向各方向绕射的现象。
+		\item \textbf{波面}：波在空间中传播过程中，由同为某一特定相位的点组成的一系列曲面。
+		\item \textbf{次波}：波源发出的波面上任意一点作为新波源产生的新波。
+		\item \textbf{波面极点}：当所选的波面为球面时，波面与参考点和波面对应圆心连线的交点。
+		\item \textbf{极点距 \(r_0\)}：波面极点与考察点之间的距离，是影响考察点成像的重要因素。
+		\item \textbf{菲涅尔半波带}：在同一波面上，距离观察点 \(P\) 距离差为半个波长的点所形成的、以极点为中心的同心圆环。
+		\item \textbf{衍射角 \(\theta\)}：所选的衍射光传播方向与入射光传播方向的夹角。
+		\item \textbf{波带片}：一种特殊的衍射光学元件，通过遮挡奇数或偶数半波带，使透过的次波在考察点叠加增强，可实现成像功能。
+		\item \textbf{光栅}：具有空间周期性的衍射元件，是多缝衍射的典型研究对象。以下讨论的都是由大量等宽、等间距的平行狭缝（或刻痕）组成的均匀光栅。
+		\item \textbf{光栅常数 \(d\)}：光栅相邻两条狭缝中心之间的距离，等于透光部分宽度 \(b\) 与不透光部分宽度 \(a\) 之和，即 \(d = a + b\)。
+		\item \textbf{光阑}：能够对光束产生限制作用的仪器；在所有的光阑中，限制入射光束最起作用的那个光阑称之为孔径光阑或者有效光阑。
+		\item \textbf{入射光瞳}：有效光阑对前面部分所有的光具组所成的像。
+		\item \textbf{出射光瞳}：有效光阑对自己后面部分的所有的光具所成的像。
+	\end{enumerate}
+	
+	\subsubsection{衍射类型相关概念}
+	\begin{enumerate}[label=\arabic*.]
+		\item \textbf{菲涅尔衍射}：光源到障碍物的距离、障碍物到考察点的距离均为有限，或其中之一为有限的衍射类型。
+		\item \textbf{夫琅禾费衍射}：光源到障碍物的距离、障碍物到考察点的距离均为无限（或等效为无限）的衍射类型。
+		\item \textbf{单缝衍射}：以单条狭缝为障碍物的衍射现象。
+		\item \textbf{圆孔衍射（光阑衍射）}：以圆形小孔为障碍物的衍射现象，常见于光阑中。
+		\item \textbf{艾里斑}：夫琅禾费圆孔衍射中，中央形成的亮斑，其周围环绕着明暗交替的圆环（是夫琅禾费圆孔衍射的特征衍射图样，一定会出现，而在菲涅尔圆孔衍射中不会出现，菲涅尔圆孔衍射图案中心明暗不确定，与衍射条件有关）。
+		\item \textbf{多缝衍射（光栅衍射）}：多缝干涉与单缝衍射形成的复合衍射现象，以光栅为代表。
+		\item \textbf{谱线缺级}：光栅衍射中，因单缝衍射暗纹与多缝干涉明纹位置重合，导致对应级次干涉明纹消失的现象。
+		\item \textbf{谱线半角宽度}：光栅衍射谱线中心衍射角到相邻暗纹中心的衍射角的差。
+	\end{enumerate}
+	
+	\subsection{光的衍射相关原理、公式与规律}
+	
+	\subsubsection{惠更斯 - 菲涅尔原理}
+	理想状态下的波在同一均匀介质中传播时，波面上的每一点都可以看作是发射次波的新波源，空间中某一点的振动是所有这些次波在该点相干叠加的结果。
+	
+	\subsubsection{菲涅尔圆孔衍射条纹}
+	平行光照射圆孔，且满足 \(k\lambda\ll r_0\)（可见光波段、常规像距下易满足）时，圆孔衍射条纹满足如下\textbf{光阑半波带半径公式}：
+	\[
+	R = \sqrt{k\lambda r_0}
+	\]
+	式中，\(R\) 为半波带半径，\(k\) 为从圆孔中露出的相对考察点 \(P\) 半波带级次，\(\lambda\) 为光的波长，\(r_0\) 为圆孔所在波面的极点到考察点（干涉圆环中心点）的距离。
+	
+	\subsubsection{半波带合振幅计算}
+	某一波面上相对考察点 \(P\) 共有 \(k\) 个半波带，第 \(i\) 级半波带上到达 \(P\) 处的次波振幅为 \(a_i\)，当波传播到 \(P\) 时，整个波造成 \(P\) 的振幅 \(A\)。其中 \(a_i\)会随$ i $增加而缓慢减少。
+	
+	\paragraph{奇数、偶数半波带各自合振幅}
+	\[
+	\begin{cases}
+		A_{\text{odd}} = \sum_{i = 0}^{k/2}a_{2i + 1} & \text{（奇数半波带）} \\
+		A_{\text{even}} = \sum_{i = 1}^{k/2}a_{2i} & \text{（偶数半波带）}
+	\end{cases}
+	\]
+	
+	\paragraph{总合振幅}：
+	\[
+	\begin{cases}
+		A = \frac{1}{2}(a_1 - a_k) & \text{（}k\text{取偶数时）} \\
+		A = \frac{1}{2}(a_1 + a_k) & \text{（}k\text{取奇数时）}
+	\end{cases}
+	\]
+	式中，\(a_1\) 为第 1 级子波的振幅，\(a_k\) 为第 \(k\) 级子波的振幅，\(A\) 为考察点的合振幅。
+	
+	特别的，$a_\infty = 0 ; A_\infty = a_i/2$
+	\subsubsection{夫琅禾费衍射单缝衍射}
+	
+	\paragraph{光强计算}
+	光垂直正对单缝照射时，缝后 \(P\) 点的光强满足如下公式：
+	\[
+	\begin{cases}
+		I_P = I_0 \left( \frac{\sin u}{u} \right)^2 \\
+		u = \frac{\pi b \sin\theta}{\lambda}
+	\end{cases}
+	\]
+	式中，\(I_0\) 为缝处入射光中央明纹峰值光强，\(I_P\) 为缝后 \(P\) 点光强，\(\theta\) 为衍射角，\(b\) 为单缝宽度，\(\lambda\) 为光的波长。
+	
+	\paragraph{单缝衍射条纹计算}
+	当光垂直正对单缝照射时，衍射条纹的衍射角满足分段公式：
+	\[
+	\sin\theta=\begin{cases}\displaystyle\frac{k\lambda}{b},& \text{暗条纹}\\[2ex]\displaystyle\frac{(2k+1)\lambda}{2b},& \text{亮条纹中心}\end{cases}
+	\]
+	式中 $k=\pm1、\pm2、\pm3\cdots$ 为衍射级次；$\theta$ 为衍射角，即衍射光线与单缝法线的夹角；$b$ 为单缝宽度；$\lambda$ 为入射光波长。
+	特别说明：中央亮纹位于$+1$级与$-1$级暗条纹中心之间，称为主极大，其宽度为其他次级亮纹的$2$倍。
+	
+	
+	\subsubsection{夫琅禾费衍射圆孔衍射}夫琅禾费圆孔衍射场景下，艾里斑半角宽度满足如下公式：
+	\[
+	\sin\theta = 0.61\frac{\lambda}{R} = 1.22\frac{\lambda}{D}
+	\]
+	式中，\(\theta\) 为第一级暗条纹衍射角（即艾里斑半角宽度），\(\lambda\) 为光的波长，\(R\) 为圆孔半径，\(D\) 为圆孔直径，且 \(D = 2R\)。
+	
+	由于$\sin\theta \approx \theta$ 近似，得：
+	\[
+	\theta = 0.61\frac{\lambda}{R} = 1.22\frac{\lambda}{D}
+	\]
+	
+	\subsubsection{夫琅禾费衍射多缝衍射（光栅衍射）}
+	
+	针对夫琅禾费衍射的多缝情形，对象为狭缝均匀分布、周期性重复的均匀光栅，且光栅狭缝集中而密集时，相关计算公式如下：
+	
+	
+	\paragraph{光强公式}：
+	\[
+	\begin{cases}
+		I_P = I_0 \cdot \frac{\sin^2 u}{u^2} \cdot \frac{\sin^2 nv}{\sin^2 v} \\
+		u = \frac{\pi b \sin\theta}{\lambda} \\
+		v = \frac{\pi d \sin\theta}{\lambda} \\
+		d = a + b
+	\end{cases}
+	\]
+	式中，\(I_0\) 为缝处入射光中央明纹峰值光强，\(I_P\) 为观测点 \(P\) 处光强，\(n\) 为光栅狭缝总数，\(d\) 为光栅常数，\(a\) 为光栅不透光部分宽度，\(b\) 为光栅透光部分宽度；\(\frac{\sin^2 u}{u^2}\) 为单缝衍射因子，\(\frac{\sin^2 nv}{\sin^2 v}\) 为缝间干涉因子。
+	
+	\paragraph{光栅方程}：
+	\[
+	d\sin\theta = j\lambda
+	\]
+	式中，\(d\) 为光栅常数，\(\theta\) 为衍射角，\(j\) 为衍射级次（\(j = 0, \pm1, \pm2, \dots\)），\(\lambda\) 为入射光的波长。
+	
+	\paragraph{谱线缺级公式}：
+	\[
+	\frac{d}{b} = \frac{k}{k'}
+	\]
+	式中，\(d\) 为光栅常数，\(b\) 为光栅透光部分宽度，\(k\) 为缺级的级数，\(k'\) 为单缝衍射暗纹的级次（\(k' = \pm1, \pm2, \dots\)）。
+	
+	\paragraph{光栅谱线半角宽度公式}：谱线非常密集时，光栅谱线的半角宽度满足如下公式：
+	\[
+	\Delta\theta = \frac{\lambda}{Nd}
+	\]
+	式中，\(\Delta\theta\) 为光栅谱线的半角宽度，\(\lambda\) 为入射光的波长，\(N\) 为光栅狭缝总数，\(d\) 为光栅常数。
+	
+	\subsection{应用}
+	
+	\subsubsection{波带片}
+	
+	\paragraph{波带片的加强原理}
+	
+	在某一波面上相对考察点 \(P\) 有第 \(k\) 个半波带，往往遮盖住 \(A_{\text{even}}\) 或 \(A_{\text{odd}}\)，只取一组半波带的次波进行叠加，从而增强考察点的振幅（需要波带片整体尺寸远小于主焦距）。
+	
+	\paragraph{波带片的高斯成像定律}
+	
+	波带片用于成像场景，适配单色光与均匀透明介质时，满足如下公式：
+	\[
+	\begin{cases}
+		\dfrac{1}{R} + \dfrac{1}{r_0} = \dfrac{1}{f'} \\
+		\\
+		f' = \dfrac{R_k^2}{k\lambda}
+	\end{cases}
+	\]
+	式中，\(R\) 为物距（点光源到波带片中心距离），\(r_0\) 为像距（波带片中心到成像点距离），\(f'\) 为主焦距，\(R_k\) 为波带半径，\(k\) 为波带数，\(\lambda\) 为光的波长。
+	
+	
+	\section{几何光学}
+	\subsection{费马定律}
+	光的传播总沿\textbf{光程取极值}的路线进行传播。
+	
+	\subsubsection{核心推论}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item 光在均匀介质中沿直线传播
+		\item 折射定律：公式为 $n_1\sin i_1 = n_2\sin i_2$
+		\item 反射定律：反射角与入射角大小相等
+		\item 全反射（折射定律的二级推论）：临界角$C$满足 $\sin C=\frac{n_1}{n_2}$，条件为$n_1<n_2$（光从光疏介质射向光密介质）
+	\end{enumerate}
+	
+	\subsubsection{特殊曲面反射的光学性质（费马定律应用）}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item 抛物线镜面：光源置于焦点，光线经曲面反射后均为平行光
+		\item 椭圆镜面：从一个焦点发出的光，经曲面反射后必过另一个焦点
+		\item 双曲线镜面：从一个焦点发出的光，经曲面反射后，反射光线的延长线过另一个焦点
+	\end{enumerate}
+	
+	\subsection{符号法则}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em, itemsep=0.3em]
+		\item 物理量符号取值遵循\textbf{物负像正}原则
+		\item 沿垂直主轴方向的距离，取值遵循\textbf{上正下负}原则
+		\item 倾斜角度定义为光线与主轴的夹角，其绝对值严格小于 $\frac{\pi}{2}$
+		\item 倾斜角度取值遵循\textbf{逆时针转动为负，顺时针转动为正}原则
+		\item 像距符号对应像的虚实：像距为正为实像，像距为负为虚像
+		\item 上述均为物理计算中量的符号规定，对应的几何长度与几何角度的实际值均为正值
+	\end{enumerate}
+	
+	\subsection{核心公式}
+	\subsubsection{高斯物像公式}
+	适用条件：同一介质下，对主轴旋转对称的光学系统
+	公式表达式：
+	\[
+	\frac{f'}{s'}+\frac{f}{s}=1
+	\]
+	补充说明：截断薄透镜不直接符合该公式的系统要求，需先补全透镜满足旋转对称条件，再分开进行成像分析。
+	
+	\subsubsection{高斯公式推论}
+	\textbf{注：本部分以下涉及的焦距 }f\textbf{ 均取绝对值}
+	
+	\paragraph{凸透镜}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em, itemsep=0.5em]
+		\item 一倍焦距以内（$u<f$）：正立、放大、虚像，像与物同侧
+		\item 一倍焦距处（$u=f$）：不成像，光线经透镜后平行射出
+		\item 一倍-两倍焦距间（$f<u<2f$）：倒立、放大、实像，像与物异侧，像距$v>2f$
+		\item 两倍焦距处（$u=2f$）：倒立、等大、实像，像与物异侧，$v=2f$，是放大/缩小实像的分界点
+		\item 两倍焦距以外（$u>2f$）：倒立、缩小、实像，像与物异侧，$f<v<2f$
+	\end{enumerate}
+	
+	\paragraph{凹透镜}
+	
+	\textbf{所有实物成像只有1种规律，无多区间差异}：无论物距是$u<f$、$f<u<2f$还是$u>2f$，均成正立、缩小、虚像，像与物同侧，像距$v<f$。
+	
+
+	\subsubsection{近轴光线条件下球面折射的物像公式}
+	适用条件：近轴光线条件下的球面折射
+	公式表达式：
+	\[
+	\frac{n'}{s'}-\frac{n}{s}=\frac{n'-n}{r}
+	\]
+	式中 $s'$为像距，$n'$为球面后方介质（透镜）的折射率，$n$为入射介质的折射率，$r$为球面的曲率半径。
+	
+	\subsubsection{横向放大率公式}
+	定义：描述物点、像点垂直于主轴的距离变化，表征透镜引起的物体高度变化
+	定义式：
+	\[
+	\beta=\frac{y'}{y}
+	\]
+	式中 $y'$为像点距离主轴的距离，$y$为物点距离主轴的距离。
+	
+	近轴条件下（三角形相似推导）：
+	\[
+	\beta=\frac{y'}{y}=\frac{s'}{s}
+	\]
+	
+	\subsection{薄透镜作图求像}
+	\subsubsection{核心定则}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em]
+		\item 过心不变：光线通过透镜光心，传播方向保持不变
+		\item 过焦平行：入射光线（不限平行主轴）过焦平面，经透镜折射后呈平行光；光源在焦平面上，发出的光经透镜后形成平行光；过焦点的光线，经透镜折射后平行于光轴
+		\item 平行过焦：平行入射的光线（不限平行主轴），经透镜折射后必会汇聚于焦平面；平行于光轴的入射光线，经透镜折射后过焦点
+	\end{enumerate}
+	
+	\subsubsection{常用辅助线/面}
+	\begin{itemize}[leftmargin=2em, itemsep=0.3em]
+		\item 光线的延长线
+		\item 过光心的平行线
+		\item 焦平面
+		\item 过焦点的平行线
+	\end{itemize}
+	
+	
+	
+	\section{助视仪器}
+	能增强人眼观测能力的光学仪器称为助视仪器，核心用于提升人眼观测的清晰度与范围，以下探讨常见助视仪器及人眼相关特性。
+	
+	\subsection{人眼的核心特性}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em, itemsep=0.5em]
+		\item 明视距离：标准取值$\boldsymbol{D=25\ \mathrm{cm}}$（厘米），是人眼毫不费力就能看清物体的距离；实际值与人眼健康、年龄及生理特性相关。
+		\item 物的视角$U$：物体边缘点与人眼节点（或瞳孔中心）的连线，与人眼主轴所成的夹角。
+		\item 助视仪器的像视角$U'$：物体经助视仪器成像后，像的边缘点与人眼节点（或瞳孔中心）的连线，与人眼主轴所成的夹角。
+		\item 助视仪器放大本领：近轴状态下，定义为$\boldsymbol{M=\frac{U'}{U}}$。
+	\end{enumerate}
+	
+	\subsection{单透镜助视仪器}
+	常见类型：放大镜、远视眼镜、近视眼镜
+	
+	\subsubsection{放大镜}
+	核心为凸透镜；放大本领计算需先依据凸透镜成像原理分析成像情况，再对应得出物与像的视角，按放大本领定义计算。
+	
+	\subsubsection{远视眼镜}
+	镜片为凸透镜，放大本领计算方式与放大镜一致，均依托凸透镜成像原理。
+	人的远视本质是明视距离偏大，老年人因晶状体衰老引发的老花眼属于远视眼，老花镜是远视眼镜的一种。
+	
+	\subsubsection{近视眼镜}
+	镜片为凹透镜；需通过凹透镜成像原理确定虚像位置，再计算对应物与像的视角，推导放大本领。
+	人的近视本质是明视距离偏小。
+	
+	\subsubsection{眼镜的实质}
+	近视眼异常明视距离$D'<25\ \mathrm{cm}$，凹透镜对$25\ \mathrm{cm}$处物体成正立缩小虚像，虚像位置恰好落在近视眼能清晰视物的近距处；远视眼异常明视距离$D'>25\ \mathrm{cm}$，凸透镜对$25\ \mathrm{cm}$处物体成正立放大虚像，虚像位置落在远视眼适配的远距处。
+	
+	单透镜所成的像在明视距离处时，放大本领为：
+	\[
+	M=\frac{D}{f'}
+	\]
+	
+	\subsection{双透镜助视仪器}
+	常见类型：折射式望远镜、显微镜，可通过物像特点区分。
+	
+	\subsubsection{折射式望远镜}
+	折射式望远镜主要分为两类：伽利略望远镜、开普勒望远镜。望远镜成像在无穷远处，入射光为平行光，可认为物点在无穷远处。
+	
+	\begin{enumerate}[label=\arabic*., leftmargin=2em, itemsep=0.8em]
+		\item \textbf{伽利略望远镜} \\
+		由像方焦距为$f_1'$的物镜和像方焦距为$f_2'$的目镜组成，放大本领$M = -\frac{f_1'}{f_2'}$，成像为正立放大的虚像，多用于儿童望远镜和观剧镜。
+		
+		\item \textbf{开普勒望远镜} \\
+		由像方焦距为$f_1'$的物镜和物方焦距为$f_2$的目镜组成，物镜与目镜均为凸透镜，放大本领$M = \frac{f_1'}{f_2}$，所成的是倒立放大的实像，常见于专业的天文望远镜。
+		
+		\item \textbf{两类望远镜关联与对比} \\
+		开普勒望远镜是伽利略望远镜的改进版，伽利略望远镜于1609年发明，开普勒望远镜是1611年由开普勒从伽利略望远镜改进而来；开普勒望远镜性能更加优异，因其所成的像为实像，可在望远镜上安装叉丝等辅助测量设备。
+		
+		\item \textbf{反射式望远镜（以牛顿望远镜为代表）} \\
+		反射式望远镜在开普勒望远镜的基础上改进而来，利用具有反射能力的曲面代替物镜凸透镜完成第一次聚焦，后续有格雷戈里式、卡塞格林式、施密特式等改进类型，由多组反射镜组合制成，属于现代望远镜；哈勃太空望远镜也属于反射式，专用于专业天文台观测和大口径天文望远镜系统。
+		
+		\item \textbf{激光扩束器} \\
+		激光扩束器本质是倒装的折射式望远镜，分为伽利略式和开普勒式；实际应用中常采用倒置的伽利略式望远镜，因平行光入射时其光路无汇聚点，可避免汇聚点能量聚集烧毁元件，放大倍率与作为助视仪器时的放大倍率一致。
+	\end{enumerate}
+	
+	\subsubsection{显微镜}
+	显微镜成像在明视距离处，入射光来自近距离点光源。
+	结构与开普勒式望远镜类似，物镜的实像作为目镜的实物，且目镜的物距满足$s<f$；物镜与目镜均为凸透镜，二者合在一起可等效为一个凸透镜，其像方焦距为：
+	\[
+	f'=-\frac{f_1'f_2'}{\Delta}
+	\]
+	其中$\Delta$为光学间隔，通常取镜筒长$L$。
+	
+	显微镜放大本领为：
+	\[
+	M=-\frac{\Delta \cdot D}{f_1'f_2'}
+	\]
+	$f_1'$、$f_2'$分别为物镜和目镜的像方焦距，负号表示所成的像为倒立的像。
+	
+	\subsection{助视仪器的像分辨本领}
+	分辨本领的含义是仪器能够区分相距非常近的两个物点的能力，通常用这两个物点与仪器节点的视角差来表述，即最小分辨角。
+	
+	\subsubsection{人眼的极限分辨视角}
+	考虑到人眼视网膜的能力及结构构造，人眼对明视距离处两个非常靠近物点的分辨能力，对应两物点的视角差$U_0=3.4\times10^{-4}\ \mathrm{rad}$（弧度），约等于1分，此即人眼的分辨本领。
+	
+	\subsubsection{望远镜的角分辨本领}
+	\begin{enumerate}[label=\arabic*., leftmargin=2em, itemsep=0.5em]
+		\item \textbf{光学仪器分辨率的物理意义}：影响光学仪器分辨率的主要原因是光的衍射，衍射会造成相近物点的像发生重叠，进而影响仪器对两物点的区分能力；望远镜角分辨本领的计算核心基于夫琅和费圆孔衍射相关规律。
+		
+		\item \textbf{瑞利判据}：由夫琅和费圆孔衍射可导出瑞利判据，望远镜角分辨本领公式为
+		\[
+		U=1.22\frac{\lambda}{D}=0.610\frac{\lambda}{R}
+		\]
+		该式子形式与夫琅和费圆孔衍射公式相似，但符号意义存在差异。若不在真空或空气中，式子变形为
+		\[
+		U=1.22\frac{\lambda}{nD}
+		\]
+		
+		\item \textbf{符号意义解释}：式中$D$指孔径光阑或有效光阑的直径，$R$是孔径光阑的半径；因望远镜入射光为平行光，通常取望远镜物镜的口径作为$D$值。
+		
+		\item \textbf{扩束器相关应用}：扩束器本质为倒置的望远镜，其角放大率可通过瑞利判据求解；瑞利判据中所求的$U$，对应扩束后激光形成圆斑的角大小；当激光到接收屏的距离固定时，可据此推算扩束后圆斑的实际大小，且圆斑的角大小与扩束器的口径成反比。
+		
+		\item \textbf{成像清晰的要求}：对于望远镜而言，成像清晰的条件是其最小分辨角小于人眼的最小分辨角，即 $U<U_0$。
+	\end{enumerate}
+	
+	\subsubsection{显微镜的分辨本领}
+	显微镜的分辨本领通常用最小可辨认的两物点间距$\Delta y$表示；其入射光非平行光，本身不遵循夫琅和费圆孔衍射，因显微镜制造中共轭点始终满足阿贝正弦条件，可将像平面上的衍射转化为夫琅和费衍射进行计算，得阿贝分辨率公式：
+	\[
+	\Delta y=\frac{1.22\lambda s'}{nd}
+	\]
+	式中$d$为物镜的口径，$s'$为物镜到像的距离（像距），$n$为样本所处介质的折射率。
+
+	
+	
+	
+	
+	
+	
+		
+	\end{document}
